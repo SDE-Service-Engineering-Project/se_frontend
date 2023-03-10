@@ -1,3 +1,5 @@
+[![Build & Test](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/angular.yml/badge.svg)](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/angular.yml)
+
 # SeFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
