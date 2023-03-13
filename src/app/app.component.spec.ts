@@ -24,7 +24,7 @@ describe('AppComponent', () => {
     expect(fixture.debugElement.nativeElement).toMatchSnapshot();
   });
 
-  it(`should have as title 'se_frontend'`, () => {
-    expect(component.title).toEqual('se_frontend');
+  it(`should display login page`, () => {
+    expect(component.title).toEqual('CarRental');
   });
 });
