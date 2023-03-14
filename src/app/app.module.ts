@@ -5,19 +5,19 @@ import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
-import { httpInterceptor } from './core/service/interceptor/http.interceptor';
+import { httpInterceptor } from './services/interceptor/http.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRouting,
     NgbModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
   ],
   providers: [httpInterceptor],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

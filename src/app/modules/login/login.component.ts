@@ -1,42 +1,42 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../core/service/http/auth.service";
-import {StorageService} from "../core/service/storage.service";
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/http/auth.service';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./login.component.sass'],
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    username: new FormControl("", [Validators.required]),
-    password: new FormControl("", [Validators.required])
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
 
-  constructor(private authService: AuthService, private storageService: StorageService) {
+  constructor(
+    private authService: AuthService,
+    private storageService: StorageService
+  ) {}
 
-  }
-
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 
   submitLogin() {
     if (this.loginForm.invalid) return;
 
-    this.authService.login(this.getFormField('username'), this.getFormField('password'))
+    this.authService
+      .login(this.getFormField('username'), this.getFormField('password'))
       .subscribe({
-        next: data => {
-          console.log(data)
-          this.storageService.saveToken(data)
+        next: (data) => {
+          console.log(data);
+          this.storageService.saveToken(data);
           // TODO: redirect to home page
-        }, error: err => {
+        },
+        error: (err) => {
           // TODO: add toast for errors
-          console.log(err)
-        }
-      })
+          console.log(err);
+        },
+      });
   }
 
   private getFormField(name: string): string {

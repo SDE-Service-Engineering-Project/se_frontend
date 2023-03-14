@@ -2,6 +2,8 @@ import { ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MockComponent } from 'ng-mocks';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
