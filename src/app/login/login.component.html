@@ -14,17 +14,33 @@
                   <p class="text-muted mt-2 mb-5">Enter your user name and password to access the best cars in the
                     world.</p>
 
-                  <form>
+                  <form [formGroup]="loginForm" id="loginForm" (ngSubmit)="submitLogin()" >
                     <div class="form-group" style="text-align: left">
                       <label for="inputUserName">Username</label>
-                      <input type="text" class="form-control" id="inputUserName" >
+                      <input type="text" class="form-control" id="inputUserName" formControlName="username"
+                             [ngClass]="{ 'is-invalid': loginForm.get('username')?.touched && loginForm.get('username')!!.errors, 'is-valid': loginForm.get('username')!!.valid }"
+                      >
+                      <div *ngIf="loginForm.get('username')!!.touched && loginForm.get('username')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="loginForm.get('username')!!.errors!!.hasOwnProperty('required')" id="err-username">Username is required!
+                        </div>
+                      </div>
                     </div>
+
                     <div class="form-group mb-5 mt-2" style="text-align: left">
                       <label for="inputPassword">Password</label>
-                      <input type="password" class="form-control" id="inputPassword" >
+                      <input type="password" class="form-control" id="inputPassword" formControlName="password"
+                             [ngClass]="{ 'is-invalid': loginForm.get('password')!!.touched && loginForm.get('password')!!.errors, 'is-valid': loginForm.get('password')!!.valid }"
+                      >
+                      <div *ngIf="loginForm.get('password')!!.touched && loginForm.get('password')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="loginForm.get('password')!!.errors!!.hasOwnProperty('required')" id="err-password">Password is
+                          required!
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group mb-5">
-                      <button type="submit" class="btn btn-theme form-control" id="login-btn" >Login</button>
+                      <button type="submit" class="btn btn-theme form-control" id="login-btn" [disabled]="loginForm!!.invalid">Login</button>
                     </div>
                   </form>
                 </div>
@@ -44,7 +60,8 @@
         </div>
         <!--TODO: add register component-->
         <p class="text-muted text-center mt-3 mb-0">Don't have an account? Register <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-primary ml-1">here</a>.</p>
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-primary ml-1">here</a>.
+        </p>
       </div>
     </div>
   </div>
