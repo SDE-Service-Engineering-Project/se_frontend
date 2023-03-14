@@ -1,29 +1,23 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {LoginComponent} from './login/login.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {httpInterceptor} from "./core/service/interceptor/http.interceptor";
-import {HttpClientModule} from "@angular/common/http";
+import { AppRouting } from './app.routing';
+import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from './shared/shared.module';
+import { httpInterceptor } from './services/interceptor/http.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRouting,
     NgbModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    SharedModule,
+    HttpClientModule,
   ],
   providers: [httpInterceptor],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

@@ -1,16 +1,20 @@
-import {TestBed} from '@angular/core/testing';
-import {ACCESS_TOKEN, REFRESH_TOKEN, StorageService, USER_NAME} from "./storage.service";
-import {AuthResponse} from "../model/AuthResponse";
+import { TestBed } from '@angular/core/testing';
+import {
+  ACCESS_TOKEN,
+  REFRESH_TOKEN,
+  StorageService,
+  USER_NAME,
+} from './storage.service';
+import { AuthResponse } from '../models/AuthResponse';
 
 const token: AuthResponse = {
   authToken: 'token',
   refreshToken: 'refreshtoken',
   expiresAt: new Date(123456),
-  userName: 'username'
+  userName: 'username',
 };
 describe('StorageService', () => {
   let service: StorageService;
-
 
   beforeEach(() => {
     sessionStorage.clear();
@@ -22,15 +26,20 @@ describe('StorageService', () => {
     expect(service).toBeTruthy();
   });
 
-
   it('should save auth response to session storage', function () {
     expect(sessionStorage.getItem(ACCESS_TOKEN)).toBeNull();
     expect(sessionStorage.getItem(REFRESH_TOKEN)).toBeNull();
     expect(sessionStorage.getItem(USER_NAME)).toBeNull();
     service.saveToken(token);
-    expect(sessionStorage.getItem(ACCESS_TOKEN)).toEqual(JSON.stringify(token.authToken));
-    expect(sessionStorage.getItem(REFRESH_TOKEN)).toEqual(JSON.stringify(token.refreshToken));
-    expect(sessionStorage.getItem(USER_NAME)).toEqual(JSON.stringify(token.userName));
+    expect(sessionStorage.getItem(ACCESS_TOKEN)).toEqual(
+      JSON.stringify(token.authToken)
+    );
+    expect(sessionStorage.getItem(REFRESH_TOKEN)).toEqual(
+      JSON.stringify(token.refreshToken)
+    );
+    expect(sessionStorage.getItem(USER_NAME)).toEqual(
+      JSON.stringify(token.userName)
+    );
   });
 
   it('should retrieve authentication when present', function () {
@@ -39,7 +48,6 @@ describe('StorageService', () => {
     expect(sessionStorage.getItem(USER_NAME)).toBeNull();
     service.saveToken(token);
 
-    expect(service.getAccessToken()).toEqual(token.authToken)
+    expect(service.getAccessToken()).toEqual(token.authToken);
   });
-
 });

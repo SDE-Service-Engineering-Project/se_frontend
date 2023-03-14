@@ -1,9 +1,9 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {createComponentFactory, Spectator} from '@ngneat/spectator/jest';
-import {RouterTestingModule} from '@angular/router/testing';
-import {LoginComponent} from "./login/login.component";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
+import { ComponentFixture } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MockComponent } from 'ng-mocks';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
@@ -13,14 +13,10 @@ describe('AppComponent', () => {
   const createComponent = createComponentFactory({
     detectChanges: false,
     component: AppComponent,
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule, MockComponent(HeaderComponent)],
   });
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      declarations: [AppComponent, LoginComponent]
-    }).compileComponents()
+  beforeEach(() => {
     spectator = createComponent();
     fixture = spectator.fixture;
     component = spectator.component;

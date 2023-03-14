@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <nav
+    class="navbar navbar-expand-lg bg-primary"
+    data-bs-theme="dark"
+  >
+    <div
+      class="container-fluid"
+    >
+      <a
+        class="navbar-brand"
+        href="/home"
+        routerlink="/home"
+      >
+        Navbar
+      </a>
+      <button
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navbarSupportedContent"
+        data-bs-toggle="collapse"
+        data-testid="toggle-btn"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="collapse navbar-collapse show"
+        id="navbarSupportedContent"
+      >
+        <ul
+          class="navbar-nav me-auto mb-2 mb-lg-0"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-testid="nav-item-cars"
+              href="/cars"
+              routerlinkactive="active-link"
+            >
+              Rented Cars
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-testid="nav-item-maps"
+              href="/maps"
+              routerlinkactive="active-link"
+            >
+              Find a Location
+            </a>
+          </li>
+          
+        </ul>
+        <ul
+          class="navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-testid="nav-logout"
+              id="logout"
+            >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
