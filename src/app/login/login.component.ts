@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AuthService} from "../core/service/http/auth.service";
+import {StorageService} from "../core/service/storage.service";
 
 @Component({
   selector: 'app-login',
@@ -12,6 +14,9 @@ export class LoginComponent implements OnInit {
     password: new FormControl("", [Validators.required])
   });
 
+  constructor(private authService: AuthService, private storageService: StorageService) {
+
+  }
 
   ngOnInit(): void {
 
@@ -21,6 +26,20 @@ export class LoginComponent implements OnInit {
   submitLogin() {
     if (this.loginForm.invalid) return;
 
-    console.log("make login call user:" + this.loginForm.get('username')!!.value + " password: " + this.loginForm.get('password')!!.value)
+    this.authService.login(this.getFormField('username'), this.getFormField('password'))
+      .subscribe({
+        next: data => {
+          console.log(data)
+          this.storageService.saveToken(data)
+          // TODO: redirect to home page
+        }, error: err => {
+          // TODO: add toast for errors
+          console.log(err)
+        }
+      })
+  }
+
+  private getFormField(name: string): string {
+    return this.loginForm.get(name)!!.value;
   }
 }
