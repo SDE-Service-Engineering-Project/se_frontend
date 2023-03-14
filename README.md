@@ -18,9 +18,9 @@ In no form is any monetization or commercialisation off this application intende
 
 ## Tools and technologies
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
-* [Angular v15](https://angular.io/)
-* [Jest](https://jestjs.io/) 
-* CSS framework is still to be decided
+* [Angular v15](https://angular.io/) as a javascript framework
+* [Jest](https://jestjs.io/)  for testing and test coverage
+* [Bootstrap](https://getbootstrap.com/) in combination with [Ng-Bootstrap](https://ng-bootstrap.github.io/#/home) as a CSS Framework
 * CI/CD is implemented with the help of [GitHub Actions](https://docs.github.com/en/actions)
 * For Code quality [SonarCloud is used](https://www.sonarsource.com/products/sonarcloud/)
 
