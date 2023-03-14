@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/http/auth.service';
 import { StorageService } from '../../services/storage.service';
+import { ToastService } from '../../services/toast/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {}
@@ -30,10 +32,10 @@ export class LoginComponent implements OnInit {
         next: (data) => {
           console.log(data);
           this.storageService.saveToken(data);
-          // TODO: redirect to home page
+          this.showSuccessToast();
         },
         error: (err) => {
-          // TODO: add toast for errors
+          this.showDangerToast(err.statusText);
           console.log(err);
         },
       });
@@ -41,5 +43,20 @@ export class LoginComponent implements OnInit {
 
   private getFormField(name: string): string {
     return this.loginForm.get(name)!!.value;
+  }
+
+  private showDangerToast(errorMsg: string) {
+    this.toastService.show('ERROR', {
+      body: errorMsg,
+      classname: 'bg-danger text-light',
+      delay: 1000000,
+    });
+  }
+
+  private showSuccessToast() {
+    this.toastService.show('Login was a success!', {
+      classname: 'bg-success text-light',
+      delay: 10000,
+    });
   }
 }

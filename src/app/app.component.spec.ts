@@ -4,6 +4,7 @@ import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockComponent } from 'ng-mocks';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
 
 describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
@@ -13,7 +14,11 @@ describe('AppComponent', () => {
   const createComponent = createComponentFactory({
     detectChanges: false,
     component: AppComponent,
-    imports: [RouterTestingModule, MockComponent(HeaderComponent)],
+    imports: [
+      RouterTestingModule,
+      MockComponent(HeaderComponent),
+      MockComponent(ToastComponent),
+    ],
   });
 
   beforeEach(() => {

@@ -5,6 +5,10 @@ exports[`AppComponent should render the app 1`] = `
   id="root0"
 >
   <app-header />
+  <app-toast
+    aria-atomic="true"
+    aria-live="polite"
+  />
   <router-outlet />
   
 </div>
