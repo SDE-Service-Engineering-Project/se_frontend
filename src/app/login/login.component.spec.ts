@@ -2,6 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LoginComponent} from './login.component';
 import {createComponentFactory, Spectator} from "@ngneat/spectator/jest";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {AuthService} from "../core/service/http/auth.service";
+import {StorageService} from "../core/service/storage.service";
+import {ReactiveFormsModule} from "@angular/forms";
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -13,7 +17,11 @@ describe('LoginComponent', () => {
     component: LoginComponent,
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, ReactiveFormsModule],
+      providers: [AuthService, StorageService]
+    })
     spectator = createComponent();
     fixture = spectator.fixture;
     component = spectator.component;
