@@ -1,0 +1,118 @@
+<div class="container-fluid center-screen">
+  <div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="card border-0">
+          <div class="card-body p-0">
+            <div class="row no-gutters">
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="mb-5">
+                    <h3 class="h4 font-weight-bold text-theme" style="color: #5369f8">Sign Up</h3>
+                  </div>
+                  <h6 class="h5 mb-0">You finally made it!</h6>
+                  <p class="text-muted mt-2 mb-5">Sign up for the worlds leading car rental service.</p>
+
+                  <form [formGroup]="registerForm" id="registerForm" (ngSubmit)="submitRegister()">
+
+                    <div class="form-group" style="text-align: left">
+                      <label for="inputUserName">Username</label>
+                      <input type="text" class="form-control" id="inputUserName" formControlName="username"
+                             [ngClass]="{ 'is-invalid': registerForm.get('username')?.touched && registerForm.get('username')!!.errors, 'is-valid': registerForm.get('username')!!.valid }"
+                      >
+                      <div *ngIf="registerForm.get('username')!!.touched && registerForm.get('username')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="registerForm.get('username')!!.errors!!.hasOwnProperty('required')"
+                             id="err-username">
+                          Username is required!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group" style="text-align: left">
+                      <label for="inputFirstName">Firstname</label>
+                      <input type="text" class="form-control" id="inputFirstName" formControlName="firstname"
+                             [ngClass]="{ 'is-invalid': registerForm.get('firstname')?.touched && registerForm.get('firstname')!!.errors, 'is-valid': registerForm.get('firstname')!!.valid }"
+                      >
+                      <div *ngIf="registerForm.get('firstname')!!.touched && registerForm.get('firstname')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="registerForm.get('firstname')!!.errors!!.hasOwnProperty('required')"
+                             id="err-firstName">
+                          Firstname is required!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group" style="text-align: left">
+                      <label for="inputLastName">Lastname</label>
+                      <input type="text" class="form-control" id="inputLastName" formControlName="lastname"
+                             [ngClass]="{ 'is-invalid': registerForm.get('lastname')?.touched && registerForm.get('lastname')!!.errors, 'is-valid': registerForm.get('lastname')!!.valid }"
+                      >
+                      <div *ngIf="registerForm.get('lastname')!!.touched && registerForm.get('lastname')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="registerForm.get('lastname')!!.errors!!.hasOwnProperty('required')"
+                             id="err-lastname">
+                          Lastname is required!
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group" style="text-align: left">
+                      <label for="inputPassword">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" formControlName="password"
+                             [ngClass]="{ 'is-invalid': registerForm.get('password')!!.touched && registerForm.get('password')!!.errors, 'is-valid': registerForm.get('password')!!.valid }"
+                      >
+                      <div *ngIf="registerForm.get('password')!!.touched && registerForm.get('password')!!.errors"
+                           class="invalid-feedback">
+                        <div *ngIf="registerForm.get('password')!!.errors!!.hasOwnProperty('required')"
+                             id="err-password">
+                          Password is required!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group mb-5" style="text-align: left">
+                      <label for="inputConfirmPassword">Confirm Password</label>
+                      <input type="password" class="form-control" id="inputConfirmPassword"
+                             formControlName="confirm_password"
+                             [ngClass]="{ 'is-invalid': registerForm.get('confirm_password')!!.touched && registerForm.get('confirm_password')!!.errors, 'is-valid': registerForm.get('confirm_password')!!.valid }"
+                      >
+                      <div
+                        *ngIf="registerForm.get('confirm_password')!!.touched && registerForm.get('confirm_password')!!.errors"
+                        class="invalid-feedback">
+                        <div *ngIf="registerForm.get('confirm_password')!!.errors!!"
+                             id="err-confirm_password">
+                          Password does not match!
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group mb-5">
+                      <button type="submit" class="btn btn-theme form-control" id="register-btn"
+                              [disabled]="registerForm!!.invalid">Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-6 d-none d-lg-inline-block">
+                <div class="logo-register rounded-right">
+                  <div class="overlay rounded-right"></div>
+                  <div class="logo-inner">
+                    <h4 class="text-white mb-4">Welcome to Car Rental</h4>
+                    <p class="lead text-white">"Where cars are still cars."</p>
+                    <p>- Godfather (CEO)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-muted text-center mt-3 mb-0">Already have an account? Login <a
+          routerLink=""  rel="noopener" class="text-primary ml-1">here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

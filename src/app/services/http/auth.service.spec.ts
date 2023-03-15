@@ -1,14 +1,10 @@
-import { AuthService } from './auth.service';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
-import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
-import { HttpClient } from '@angular/common/http';
-import { AuthResponse } from '../../models/AuthResponse';
-import { mockAuthResponse } from '../../utils/testing/mocks/authResponse.mock';
+import {AUTH_API, AuthService} from './auth.service';
+import {HttpClientTestingModule, HttpTestingController,} from '@angular/common/http/testing';
+import {createServiceFactory, SpectatorService} from '@ngneat/spectator';
+import {HttpClient} from '@angular/common/http';
+import {AuthResponse} from '../../models/AuthResponse';
+import {mockAuthResponse} from '../../utils/testing/mocks/authResponse.mock';
 
-const AUTH_API = 'http://localhost:8080/auth';
 
 describe('AuthService', () => {
   let spectator: SpectatorService<AuthService>;
@@ -37,7 +33,7 @@ describe('AuthService', () => {
     spectator.service.login('testUser', 'testPwd').subscribe((response) => {
       authResponse = response;
     });
-    const mockRequest = httpTestingController.expectOne(`${AUTH_API}/login`);
+    const mockRequest = httpTestingController.expectOne(`${AUTH_API}login`);
     expect(mockRequest.request.method).toEqual('POST');
     mockRequest.flush(mockAuthResponse);
     expect(mockRequest.request.body).toMatchObject({
