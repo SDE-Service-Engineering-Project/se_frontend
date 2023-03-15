@@ -1,11 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture} from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
-import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from '../../services/http/auth.service';
-import { StorageService } from '../../services/storage.service';
+import {LoginComponent} from './login.component';
+import {createComponentFactory, Spectator} from '@ngneat/spectator/jest';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthService} from '../../services/http/auth.service';
+import {StorageService} from '../../services/storage.service';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -94,4 +94,6 @@ describe('LoginComponent', () => {
       fixture.debugElement.nativeElement.querySelector('#login-btn').disabled
     ).toBeTruthy();
   });
+
+  // TODO: add login test with mocks and routing
 });

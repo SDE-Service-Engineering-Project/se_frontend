@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="container-fluid center-screen"
+  >
+    <div
+      class="container"
+      id="main-wrapper"
+    >
+      <div
+        class="row justify-content-center"
+      >
+        <div
+          class="col-xl-10"
+        >
+          <div
+            class="card border-0"
+          >
+            <div
+              class="card-body p-0"
+            >
+              <div
+                class="row no-gutters"
+              >
+                <div
+                  class="col-lg-6"
+                >
+                  <div
+                    class="p-5"
+                  >
+                    <div
+                      class="mb-5"
+                    >
+                      <h3
+                        class="h4 font-weight-bold text-theme"
+                        style="color: #5369f8;"
+                      >
+                        Sign Up
+                      </h3>
+                    </div>
+                    <h6
+                      class="h5 mb-0"
+                    >
+                      You finally made it!
+                    </h6>
+                    <p
+                      class="text-muted mt-2 mb-5"
+                    >
+                      Sign up for the worlds leading car rental service.
+                    </p>
+                    <form
+                      class="ng-untouched ng-pristine ng-invalid"
+                      id="registerForm"
+                      novalidate=""
+                    >
+                      <div
+                        class="form-group"
+                        style="text-align: left;"
+                      >
+                        <label
+                          for="inputUserName"
+                        >
+                          Username
+                        </label>
+                        <input
+                          class="form-control ng-untouched ng-pristine ng-invalid"
+                          formcontrolname="username"
+                          id="inputUserName"
+                          type="text"
+                        />
+                        
+                      </div>
+                      <div
+                        class="form-group"
+                        style="text-align: left;"
+                      >
+                        <label
+                          for="inputFirstName"
+                        >
+                          Firstname
+                        </label>
+                        <input
+                          class="form-control ng-untouched ng-pristine ng-invalid"
+                          formcontrolname="firstname"
+                          id="inputFirstName"
+                          type="text"
+                        />
+                        
+                      </div>
+                      <div
+                        class="form-group"
+                        style="text-align: left;"
+                      >
+                        <label
+                          for="inputLastName"
+                        >
+                          Lastname
+                        </label>
+                        <input
+                          class="form-control ng-untouched ng-pristine ng-invalid"
+                          formcontrolname="lastname"
+                          id="inputLastName"
+                          type="text"
+                        />
+                        
+                      </div>
+                      <div
+                        class="form-group"
+                        style="text-align: left;"
+                      >
+                        <label
+                          for="inputPassword"
+                        >
+                          Password
+                        </label>
+                        <input
+                          class="form-control ng-untouched ng-pristine ng-invalid"
+                          formcontrolname="password"
+                          id="inputPassword"
+                          type="password"
+                        />
+                        
+                      </div>
+                      <div
+                        class="form-group mb-5"
+                        style="text-align: left;"
+                      >
+                        <label
+                          for="inputConfirmPassword"
+                        >
+                          Confirm Password
+                        </label>
+                        <input
+                          class="form-control ng-untouched ng-pristine ng-invalid"
+                          formcontrolname="confirm_password"
+                          id="inputConfirmPassword"
+                          type="password"
+                        />
+                        
+                      </div>
+                      <div
+                        class="form-group mb-5"
+                      >
+                        <button
+                          class="btn btn-theme form-control"
+                          disabled=""
+                          id="register-btn"
+                          type="submit"
+                        >
+                          Register 
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-6 d-none d-lg-inline-block"
+                >
+                  <div
+                    class="logo-register rounded-right"
+                  >
+                    <div
+                      class="overlay rounded-right"
+                    />
+                    <div
+                      class="logo-inner"
+                    >
+                      <h4
+                        class="text-white mb-4"
+                      >
+                        Welcome to Car Rental
+                      </h4>
+                      <p
+                        class="lead text-white"
+                      >
+                        "Where cars are still cars."
+                      </p>
+                      <p>
+                        - Godfather (CEO)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            class="text-muted text-center mt-3 mb-0"
+          >
+            Already have an account? Login 
+            <a
+              class="text-primary ml-1"
+              rel="noopener"
+              routerlink=""
+            >
+              here
+            </a>
+            . 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

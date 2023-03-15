@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../services/http/auth.service';
-import { StorageService } from '../../services/storage.service';
-import { ToastService } from '../../services/toast/toast.service';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../../services/http/auth.service';
+import {StorageService} from '../../services/storage.service';
+import {ToastService} from '../../services/toast/toast.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -18,45 +19,33 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private storageService: StorageService,
-    private toastService: ToastService
-  ) {}
+    private toastService: ToastService,
+    private router: Router
+  ) {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   submitLogin() {
     if (this.loginForm.invalid) return;
 
+    this.toastService.removeAll();
+
     this.authService
-      .login(this.getFormField('username'), this.getFormField('password'))
+      .login(this.loginForm.get('username')?.value!!, this.loginForm.get('password')?.value!!)
       .subscribe({
         next: (data) => {
-          console.log(data);
           this.storageService.saveToken(data);
-          this.showSuccessToast();
+          this.router.navigate(['/home'])
+            .then(() => this.toastService.showDefaultSuccessToast("Login successfully"));
         },
         error: (err) => {
-          this.showDangerToast(err.statusText);
-          console.log(err);
+          this.loginForm.get('password')?.setValue('');
+          this.toastService.showDefaultErrorToast(err.error.message);
         },
       });
   }
 
-  private getFormField(name: string): string {
-    return this.loginForm.get(name)!!.value;
-  }
 
-  private showDangerToast(errorMsg: string) {
-    this.toastService.show('ERROR', {
-      body: errorMsg,
-      classname: 'bg-danger text-light',
-      delay: 1000000,
-    });
-  }
-
-  private showSuccessToast() {
-    this.toastService.show('Login was a success!', {
-      classname: 'bg-success text-light',
-      delay: 10000,
-    });
-  }
 }
