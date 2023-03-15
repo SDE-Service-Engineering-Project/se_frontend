@@ -21,7 +21,7 @@ describe('ToastService', () => {
     spectator = createService();
   });
 
-  it('should push a specific toast to the toasts array', () => {
+  it('should push a toast to the toasts array', () => {
     spectator.service.show(toast.text);
     expect(spectator.service.toasts.length).toEqual(1);
   });

@@ -32,7 +32,7 @@ describe('AuthService', () => {
     httpTestingController.verify();
   });
 
-  it('should log send an auth request to the backend', () => {
+  it('should send an auth request to the backend', () => {
     let authResponse: AuthResponse;
     spectator.service.login('testUser', 'testPwd').subscribe((response) => {
       authResponse = response;
