@@ -1,46 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/landing-page/landing-page.component.spec.ts">
-    <testCase name="LandingPageComponent should create" duration="32"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/storage.service.spec.ts">
-    <testCase name="StorageService should be created" duration="13"/>
-    <testCase name="StorageService should save auth response to session storage" duration="2"/>
-    <testCase name="StorageService should retrieve authentication when present" duration="2"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/http/auth.service.spec.ts">
-    <testCase name="AuthService should send an auth request to the backend" duration="7"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/register/register.component.spec.ts">
-    <testCase name="RegisterComponent should render the component" duration="44"/>
-    <testCase name="RegisterComponent should create" duration="14"/>
-    <testCase name="RegisterComponent should enable register button when all fields are correctly set" duration="12"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/toast/toast.service.spec.ts">
-    <testCase name="ToastService should push a toast to the toasts array" duration="9"/>
-    <testCase name="ToastService should remove a toast from array" duration="3"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/login/login.component.spec.ts">
-    <testCase name="LoginComponent should create" duration="30"/>
-    <testCase name="LoginComponent should display login button" duration="11"/>
-    <testCase name="LoginComponent should return valid login form is username is set" duration="8"/>
-    <testCase name="LoginComponent should return invalid login form if username is empty" duration="9"/>
-    <testCase name="LoginComponent should return valid login form if password is set" duration="13"/>
-    <testCase name="LoginComponent should return invalid login form if password is not set" duration="9"/>
-    <testCase name="LoginComponent should enable login button when username and password is set" duration="7"/>
-    <testCase name="LoginComponent should not enable login button when only username is set" duration="8"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/toast/toast.component.spec.ts">
-    <testCase name="ToastComponent should render the component" duration="14"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render the app" duration="25"/>
-    <testCase name="AppComponent should display login page" duration="11"/>
-  </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/header/header.component.spec.ts">
-    <testCase name="HeaderComponent should render the component" duration="29"/>
-    <testCase name="HeaderComponent should navigate to the correct routes" duration="16"/>
-    <testCase name="HeaderComponent should log the user out" duration="8"/>
-    <testCase name="HeaderComponent should change the collapsed property of the navbar" duration="19"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/interceptor/http.interceptor.spec.ts">
+    <testCase name="HttpInterceptor should be created" duration="0"/>
+    <testCase name="HttpInterceptor should add content type to request" duration="0"/>
+    <testCase name="HttpInterceptor should add access token to request if present" duration="14"/>
+    <testCase name="HttpInterceptor should refresh token if initial request responded with 401" duration="0"/>
   </file>
 </testExecutions>

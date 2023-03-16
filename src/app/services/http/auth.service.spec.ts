@@ -43,4 +43,35 @@ describe('AuthService', () => {
     // @ts-ignore
     expect(authResponse).toEqual(mockAuthResponse);
   });
+
+  it('should send register request to backend', () => {
+    spectator.service.register('username', 'firstname', 'lastname', 'password')
+      .subscribe(() => {
+      });
+
+    const mockRequest = httpTestingController.expectOne(`${AUTH_API}signup`);
+    expect(mockRequest.request.method).toEqual('POST');
+
+    mockRequest.flush(null);
+  })
+
+  it('should refresh access token with refresh token', () => {
+    let authResponse: AuthResponse;
+    spectator.service.refreshToken('refreshToken', 'testUser')
+      .subscribe((response) => {
+        authResponse = response;
+      });
+
+    const mockRequest = httpTestingController.expectOne(`${AUTH_API}refresh/token`);
+    expect(mockRequest.request.method).toEqual('POST');
+    mockRequest.flush(mockAuthResponse);
+
+    expect(mockRequest.request.body).toMatchObject({
+      refreshToken: "refreshToken",
+      userName: "testUser",
+    });
+
+    // @ts-ignore
+    expect(authResponse).toEqual(mockAuthResponse);
+  })
 });
