@@ -1,19 +1,17 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import {Router, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
 import {ACCESS_TOKEN, StorageService} from "../storage.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard {
 
   constructor(private storageService: StorageService, private router: Router) {
   }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     // we just check if there is a token present
     // in future we could validate the expiry date

@@ -64,7 +64,7 @@ export class HttpInterceptor implements HttpInterceptor {
             this.router.navigate([''])
               .then(() => this.toastService.showDefaultErrorToast('An authentication failure occurred, please login again.'))
 
-            return throwError(err);
+            return throwError(() => new Error(err));
           })
         );
     }
