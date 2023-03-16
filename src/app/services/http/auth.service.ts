@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthResponse } from '../../models/AuthResponse';
-import {User} from "../../models/user";
 
 export const AUTH_API = 'http://localhost:8080/api/v1/auth/';
 

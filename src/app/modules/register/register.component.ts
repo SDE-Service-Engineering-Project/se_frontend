@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -16,7 +16,7 @@ import { ToastService } from '../../services/toast/toast.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.sass'],
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   registerForm = new FormGroup({
     username: new FormControl('', [
       Validators.required,
@@ -52,8 +52,6 @@ export class RegisterComponent implements OnInit {
     private router: Router,
     private toastService: ToastService
   ) {}
-
-  ngOnInit(): void {}
 
   submitRegister() {
     if (this.registerForm.invalid) return;
@@ -105,4 +103,3 @@ export function matchValidator(
       : { matching: true };
   };
 }
-
