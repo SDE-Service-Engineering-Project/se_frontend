@@ -19,6 +19,7 @@ export class MapsComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.getLocation()
   }
 

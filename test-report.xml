@@ -1,56 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/guards/auth.guard.spec.ts">
-    <testCase name="AuthGuard should be created" duration="29"/>
-  </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render the app" duration="63"/>
-    <testCase name="AppComponent should display login page" duration="17"/>
-  </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/register/register.component.spec.ts">
-    <testCase name="RegisterComponent should render the component" duration="126"/>
-    <testCase name="RegisterComponent should create" duration="25"/>
-    <testCase name="RegisterComponent should enable register button when all fields are correctly set" duration="23"/>
-  </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/toast/toast.component.spec.ts">
-    <testCase name="ToastComponent should render the component" duration="37"/>
-  </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/login/login.component.spec.ts">
-    <testCase name="LoginComponent should create" duration="76"/>
-    <testCase name="LoginComponent should display login button" duration="29"/>
-    <testCase name="LoginComponent should return valid login form is username is set" duration="22"/>
-    <testCase name="LoginComponent should return invalid login form if username is empty" duration="21"/>
-    <testCase name="LoginComponent should return valid login form if password is set" duration="20"/>
-    <testCase name="LoginComponent should return invalid login form if password is not set" duration="18"/>
-    <testCase name="LoginComponent should enable login button when username and password is set" duration="22"/>
-    <testCase name="LoginComponent should not enable login button when only username is set" duration="18"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/landing-page/landing-page.component.spec.ts">
+    <testCase name="LandingPageComponent should create" duration="181"/>
   </file>
   <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/header/header.component.spec.ts">
-    <testCase name="HeaderComponent should render the component" duration="85"/>
-    <testCase name="HeaderComponent should navigate to the correct routes" duration="45"/>
-    <testCase name="HeaderComponent should log the user out" duration="22"/>
-    <testCase name="HeaderComponent should change the collapsed property of the navbar" duration="51"/>
+    <testCase name="HeaderComponent should render the component" duration="52"/>
+    <testCase name="HeaderComponent should navigate to the correct routes" duration="28"/>
+    <testCase name="HeaderComponent should log the user out" duration="14"/>
+    <testCase name="HeaderComponent should change the collapsed property of the navbar" duration="36"/>
   </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/http/auth.service.spec.ts">
-    <testCase name="AuthService should send an auth request to the backend" duration="13"/>
-    <testCase name="AuthService should send register request to backend" duration="3"/>
-    <testCase name="AuthService should refresh access token with refresh token" duration="3"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/maps/maps.component.spec.ts">
+    <testCase name="MapsComponent should create" duration="39"/>
   </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/interceptor/http.interceptor.spec.ts">
-    <testCase name="HttpInterceptor should be created" duration="15"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/login/login.component.spec.ts">
+    <testCase name="LoginComponent should create" duration="50"/>
+    <testCase name="LoginComponent should display login button" duration="20"/>
+    <testCase name="LoginComponent should return valid login form is username is set" duration="15"/>
+    <testCase name="LoginComponent should return invalid login form if username is empty" duration="14"/>
+    <testCase name="LoginComponent should return valid login form if password is set" duration="17"/>
+    <testCase name="LoginComponent should return invalid login form if password is not set" duration="12"/>
+    <testCase name="LoginComponent should enable login button when username and password is set" duration="13"/>
+    <testCase name="LoginComponent should not enable login button when only username is set" duration="12"/>
   </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/storage.service.spec.ts">
-    <testCase name="StorageService should be created" duration="11"/>
-    <testCase name="StorageService should save auth response to session storage" duration="3"/>
-    <testCase name="StorageService should retrieve authentication when present" duration="3"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/toast/toast.component.spec.ts">
+    <testCase name="ToastComponent should render the component" duration="22"/>
   </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/guards/login.guard.spec.ts">
-    <testCase name="LoginGuard should be created" duration="20"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/register/register.component.spec.ts">
+    <testCase name="RegisterComponent should render the component" duration="85"/>
+    <testCase name="RegisterComponent should create" duration="21"/>
+    <testCase name="RegisterComponent should enable register button when all fields are correctly set" duration="21"/>
+  </file>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/app.component.spec.ts">
+    <testCase name="AppComponent should render the app" duration="46"/>
+    <testCase name="AppComponent should display login page" duration="15"/>
   </file>
   <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/toast/toast.service.spec.ts">
-    <testCase name="ToastService should push a toast to the toasts array" duration="15"/>
-    <testCase name="ToastService should remove a toast from array" duration="10"/>
+    <testCase name="ToastService should push a toast to the toasts array" duration="8"/>
+    <testCase name="ToastService should remove a toast from array" duration="2"/>
   </file>
-  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/landing-page/landing-page.component.spec.ts">
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/http/auth.service.spec.ts">
+    <testCase name="AuthService should send an auth request to the backend" duration="17"/>
+  </file>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/storage.service.spec.ts">
+    <testCase name="StorageService should be created" duration="9"/>
+    <testCase name="StorageService should save auth response to session storage" duration="5"/>
+    <testCase name="StorageService should retrieve authentication when present" duration="2"/>
   </file>
 </testExecutions>
