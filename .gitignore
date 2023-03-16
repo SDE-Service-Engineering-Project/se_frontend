@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Test Reports
-test-report.xml
+./test-report.xml
