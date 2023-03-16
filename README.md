@@ -1,4 +1,5 @@
 [![Build & Test](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/build.yml/badge.svg)](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/build.yml)
+[![Sonar Scan](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/sonar.yaml/badge.svg)](https://github.com/SDE-Service-Engineering-Project/se_frontend/actions/workflows/sonar.yaml)
 
 
 # Software Engineering Project Frontend Implementation
