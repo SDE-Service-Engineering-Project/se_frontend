@@ -27,4 +27,11 @@ export class AuthService {
       password,
     });
   }
+
+  public refreshToken(refreshToken: string, userName: string): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(AUTH_API + 'refresh/token', {
+      refreshToken,
+      userName,
+    });
+  }
 }

@@ -177,10 +177,10 @@ exports[`RegisterComponent should render the component 1`] = `
                       <p
                         class="lead text-white"
                       >
-                        "Where cars are still cars."
+                        "Float like a Cadillac, sting like a Beemer."
                       </p>
                       <p>
-                        - Godfather (CEO)
+                        - Lightning McQueen
                       </p>
                     </div>
                   </div>

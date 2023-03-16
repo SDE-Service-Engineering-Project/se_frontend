@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { AuthResponse } from '../models/AuthResponse';
+import {Injectable} from '@angular/core';
+import {AuthResponse} from '../models/AuthResponse';
 
 export const ACCESS_TOKEN = 'access_token';
 export const REFRESH_TOKEN = 'refresh_token';
@@ -23,12 +23,16 @@ export class StorageService {
     window.sessionStorage.setItem(USER_NAME, JSON.stringify(value.userName));
   }
 
-  public getAccessToken(): string | undefined {
-    let item = window.sessionStorage.getItem(ACCESS_TOKEN);
+  public getItem(key:string) {
+    let item = window.sessionStorage.getItem(key);
 
     if (item) {
       return JSON.parse(item);
     }
     return undefined;
+  }
+
+  public removeAll() {
+    window.sessionStorage.clear();
   }
 }

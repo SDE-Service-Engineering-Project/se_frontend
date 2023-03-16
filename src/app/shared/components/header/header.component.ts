@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {StorageService} from "../../../services/storage.service";
 
 @Component({
   selector: 'app-header',
@@ -21,10 +22,10 @@ export class HeaderComponent {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private storageService: StorageService,private router: Router) {}
 
   logout(): void {
-    //TODO: add logic to log user out
+    this.storageService.removeAll();
     this.router.navigate(['/']);
   }
 }
