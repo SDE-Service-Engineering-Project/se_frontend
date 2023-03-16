@@ -8,12 +8,13 @@ describe('CarCardComponent', () => {
   let component: CarCardComponent;
   let fixture: ComponentFixture<CarCardComponent>;
   let spectator: Spectator<CarCardComponent>;
+  let emitSpy: jest.SpyInstance;
 
   const createComponent = createComponentFactory({
     component: CarCardComponent,
   });
 
-  beforeEach(async () => {
+  beforeEach(() => {
     spectator = createComponent();
     fixture = spectator.fixture;
     component = spectator.component;
@@ -21,5 +22,12 @@ describe('CarCardComponent', () => {
 
   it('should render the component', () => {
     expect(fixture.debugElement.nativeElement).toMatchSnapshot();
+  });
+
+  it('should emit the car when rentCar is called', () => {
+    emitSpy = jest.spyOn(component.carRented, 'emit');
+    component.car = carsMock[0];
+    component.rentCar();
+    expect(emitSpy).toHaveBeenCalledWith(carsMock[0]);
   });
 });

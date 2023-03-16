@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RegisterComponent should render the component 1`] = `
+exports[`LoginComponent should render the component 1`] = `
 <div
   id="root0"
 >
@@ -39,22 +39,22 @@ exports[`RegisterComponent should render the component 1`] = `
                         class="h4 font-weight-bold text-theme"
                         style="color: #5369f8;"
                       >
-                        Sign Up
+                        Login
                       </h3>
                     </div>
                     <h6
                       class="h5 mb-0"
                     >
-                      You finally made it!
+                      Welcome back!
                     </h6>
                     <p
                       class="text-muted mt-2 mb-5"
                     >
-                      Sign up for the worlds leading car rental service.
+                      Enter your user name and password to access the best cars in the world.
                     </p>
                     <form
                       class="ng-untouched ng-pristine ng-invalid"
-                      id="registerForm"
+                      id="loginForm"
                       novalidate=""
                     >
                       <div
@@ -75,41 +75,7 @@ exports[`RegisterComponent should render the component 1`] = `
                         
                       </div>
                       <div
-                        class="form-group"
-                        style="text-align: left;"
-                      >
-                        <label
-                          for="inputFirstName"
-                        >
-                          Firstname
-                        </label>
-                        <input
-                          class="form-control ng-untouched ng-pristine ng-invalid"
-                          formcontrolname="firstname"
-                          id="inputFirstName"
-                          type="text"
-                        />
-                        
-                      </div>
-                      <div
-                        class="form-group"
-                        style="text-align: left;"
-                      >
-                        <label
-                          for="inputLastName"
-                        >
-                          Lastname
-                        </label>
-                        <input
-                          class="form-control ng-untouched ng-pristine ng-invalid"
-                          formcontrolname="lastname"
-                          id="inputLastName"
-                          type="text"
-                        />
-                        
-                      </div>
-                      <div
-                        class="form-group"
+                        class="form-group mb-5 mt-2"
                         style="text-align: left;"
                       >
                         <label
@@ -127,32 +93,15 @@ exports[`RegisterComponent should render the component 1`] = `
                       </div>
                       <div
                         class="form-group mb-5"
-                        style="text-align: left;"
-                      >
-                        <label
-                          for="inputConfirmPassword"
-                        >
-                          Confirm Password
-                        </label>
-                        <input
-                          class="form-control ng-untouched ng-pristine ng-invalid"
-                          formcontrolname="confirm_password"
-                          id="inputConfirmPassword"
-                          type="password"
-                        />
-                        
-                      </div>
-                      <div
-                        class="form-group mb-5"
                       >
                         <button
                           class="btn btn-theme form-control"
-                          data-testid="register-btn"
+                          data-testid="login-btn"
                           disabled=""
-                          id="register-btn"
+                          id="login-btn"
                           type="submit"
                         >
-                          Register 
+                          Login 
                         </button>
                       </div>
                     </form>
@@ -162,7 +111,7 @@ exports[`RegisterComponent should render the component 1`] = `
                   class="col-lg-6 d-none d-lg-inline-block"
                 >
                   <div
-                    class="logo-register rounded-right"
+                    class="logo rounded-right"
                   >
                     <div
                       class="overlay rounded-right"
@@ -178,7 +127,7 @@ exports[`RegisterComponent should render the component 1`] = `
                       <p
                         class="lead text-white"
                       >
-                        "Float like a Cadillac, sting like a Beemer."
+                        "I wanted to give the folks a little sizzle. Ka-chow!"
                       </p>
                       <p>
                         - Lightning McQueen
@@ -192,12 +141,12 @@ exports[`RegisterComponent should render the component 1`] = `
           <p
             class="text-muted text-center mt-3 mb-0"
           >
-            Already have an account? Login 
+            Don't have an account? Register 
             <a
               class="text-primary ml-1"
-              href="/"
+              href="/register"
               rel="noopener"
-              routerlink=""
+              routerlink="/register"
             >
               here
             </a>

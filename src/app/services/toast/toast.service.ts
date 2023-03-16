@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export interface ToastInfo {
   text: string;
@@ -14,7 +14,7 @@ export class ToastService {
   toasts: ToastInfo[] = [];
 
   show(text: string, options: any = {}) {
-    this.toasts.push({text, ...options});
+    this.toasts.push({ text, ...options });
   }
 
   remove(toast: ToastInfo) {
@@ -34,12 +34,11 @@ export class ToastService {
 
   showDefaultErrorToast(errorMessage: string) {
     if (errorMessage.length <= 0) {
-      errorMessage = "Something went wrong"
+      errorMessage = 'Something went wrong';
     }
     this.show(errorMessage, {
       classname: 'bg-danger text-light',
       delay: 10000,
     });
   }
-
 }
