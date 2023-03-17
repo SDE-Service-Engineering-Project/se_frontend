@@ -1,41 +1,70 @@
-import {Injectable} from '@angular/core';
-import {HTTP_INTERCEPTORS, HttpErrorResponse, HttpEvent, HttpHandler, HttpRequest} from '@angular/common/http';
-import {BehaviorSubject, catchError, filter, Observable, switchMap, take, throwError} from 'rxjs';
-import {ACCESS_TOKEN, REFRESH_TOKEN, StorageService, USER_NAME} from "../storage.service";
-import {AuthService} from "../http/auth.service";
-import {AuthResponse} from "../../models/AuthResponse";
-import {ToastService} from "../toast/toast.service";
-import {Router} from "@angular/router";
+import { Injectable } from '@angular/core';
+import {
+  HTTP_INTERCEPTORS,
+  HttpErrorResponse,
+  HttpEvent,
+  HttpHandler,
+  HttpRequest,
+} from '@angular/common/http';
+import {
+  BehaviorSubject,
+  catchError,
+  filter,
+  Observable,
+  switchMap,
+  take,
+  throwError,
+} from 'rxjs';
+import {
+  ACCESS_TOKEN,
+  REFRESH_TOKEN,
+  StorageService,
+  USER_NAME,
+} from '../storage.service';
+import { AuthService } from '../http/auth.service';
+import { AuthResponse } from '../../models/AuthResponse';
+import { ToastService } from '../toast/toast.service';
+import { Router } from '@angular/router';
 
 const TOKEN_HEADER_KEY = 'Authorization';
 
 @Injectable()
 export class HttpInterceptor implements HttpInterceptor {
   private isRefreshing = false;
-  private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(
+    null
+  );
 
-  constructor(private storageService: StorageService, private authService: AuthService, private toastService: ToastService, private router: Router) {
-  }
+  constructor(
+    private storageService: StorageService,
+    private authService: AuthService,
+    private toastService: ToastService,
+    private router: Router
+  ) {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (!request.headers.has("Content-Type")) {
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    if (!request.headers.has('Content-Type')) {
       request = request.clone({
-        headers: request.headers.set("Content-Type", "application/json"),
+        headers: request.headers.set('Content-Type', 'application/json'),
       });
     }
 
     let accessToken = this.storageService.getItem(ACCESS_TOKEN);
     if (accessToken) {
-      request = this.addTokenHeader(request, accessToken)
+      request = this.addTokenHeader(request, accessToken);
     }
 
-    // TODO: find a better approach then catchError (not sure tho)
-    // @ts-ignore
-    return next.handle(request).pipe(catchError((error) => {
-      if (error instanceof HttpErrorResponse && error.status === 401) {
-        return this.handle401Error(request, next);
-      }
-    }));
+    return next.handle(request).pipe(
+      // @ts-ignore
+      catchError((error) => {
+        if (error instanceof HttpErrorResponse && error.status === 401) {
+          return this.handle401Error(request, next);
+        }
+      })
+    );
   }
 
   private handle401Error(request: HttpRequest<any>, next: HttpHandler) {
@@ -61,15 +90,20 @@ export class HttpInterceptor implements HttpInterceptor {
             this.storageService.removeAll();
 
             // if we get a new token but the token does not work we return to login page
-            this.router.navigate([''])
-              .then(() => this.toastService.showDefaultErrorToast('An authentication failure occurred, please login again.'))
+            this.router
+              .navigate([''])
+              .then(() =>
+                this.toastService.showDefaultErrorToast(
+                  'An authentication failure occurred, please login again.'
+                )
+              );
 
             return throwError(() => new Error(err));
           })
         );
     }
     return this.refreshTokenSubject.pipe(
-      filter(token => token !== null),
+      filter((token) => token !== null),
       take(1),
       switchMap((token) => next.handle(this.addTokenHeader(request, token)))
     );
@@ -77,11 +111,17 @@ export class HttpInterceptor implements HttpInterceptor {
 
   private addTokenHeader(request: HttpRequest<any>, token: string) {
     if (!request.url.includes('/auth')) {
-      return request.clone({headers: request.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + token)});
+      return request.clone({
+        headers: request.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + token),
+      });
     }
 
     return request;
   }
 }
 
-export const httpInterceptor = {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}
+export const httpInterceptor = {
+  provide: HTTP_INTERCEPTORS,
+  useClass: HttpInterceptor,
+  multi: true,
+};
