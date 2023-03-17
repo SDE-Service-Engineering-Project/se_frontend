@@ -56,7 +56,7 @@ exports[`HeaderComponent should render the component 1`] = `
           >
             <a
               class="nav-link"
-              data-testid="nav-item-cars"
+              data-testid="nav-item-bookings"
               href="/bookings"
               routerlinkactive="active-link"
             >
