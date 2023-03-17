@@ -24,10 +24,10 @@ describe('CarCardComponent', () => {
     expect(fixture.debugElement.nativeElement).toMatchSnapshot();
   });
 
-  it('should emit the car when rentCar is called', () => {
-    emitSpy = jest.spyOn(component.carRented, 'emit');
+  it('should emit the car when select car is called', () => {
+    emitSpy = jest.spyOn(component.carSelected, 'emit');
     component.car = carsMock[0];
-    component.rentCar();
+    component.selectCar();
     expect(emitSpy).toHaveBeenCalledWith(carsMock[0]);
   });
 });

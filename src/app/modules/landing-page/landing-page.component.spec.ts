@@ -3,7 +3,6 @@ import { ComponentFixture } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { carsMock } from '../../utils/testing/mocks/car.mock';
-import { CarCardModule } from './components/car-card/car-card.module';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -12,17 +11,13 @@ describe('LandingPageComponent', () => {
 
   const createComponent = createComponentFactory({
     component: LandingPageComponent,
-    imports: [CarCardModule],
+    imports: [],
   });
 
   beforeEach(() => {
     spectator = createComponent();
     fixture = spectator.fixture;
     component = spectator.component;
-  });
-
-  beforeEach(() => {
-    component.cars = carsMock;
   });
 
   it('should create', () => {

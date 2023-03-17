@@ -2,7 +2,7 @@ import { Car } from '../../../models/car';
 
 export const carMock1: Car = {
   brand: 'VW',
-  carId: 1,
+  id: 1,
   constructionYear: 2020,
   createdOn: '',
   currency: 'EUR',
@@ -12,7 +12,7 @@ export const carMock1: Car = {
 };
 export const carMock2: Car = {
   brand: 'Opel',
-  carId: 2,
+  id: 2,
   constructionYear: 2014,
   createdOn: '',
   currency: 'EUR',
@@ -22,7 +22,7 @@ export const carMock2: Car = {
 };
 export const carMock3: Car = {
   brand: 'Mercedes',
-  carId: 3,
+  id: 3,
   constructionYear: 2018,
   createdOn: '',
   currency: 'EUR',

@@ -28,6 +28,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'catalog',
+    loadChildren: () =>
+      import('./modules/catalog/catalog.module').then((m) => m.CatalogModule),
+    canActivate: [AuthGuard],
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
