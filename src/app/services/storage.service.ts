@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {AuthResponse} from '../models/AuthResponse';
+import { Injectable } from '@angular/core';
+import { AuthResponse } from '../models/AuthResponse';
 
 export const ACCESS_TOKEN = 'access_token';
 export const REFRESH_TOKEN = 'refresh_token';
@@ -9,8 +9,6 @@ export const USER_NAME = 'username';
   providedIn: 'root',
 })
 export class StorageService {
-  constructor() {}
-
   saveToken(value: AuthResponse) {
     window.sessionStorage.setItem(
       ACCESS_TOKEN,
@@ -23,7 +21,7 @@ export class StorageService {
     window.sessionStorage.setItem(USER_NAME, JSON.stringify(value.userName));
   }
 
-  public getItem(key:string) {
+  public getItem(key: string) {
     let item = window.sessionStorage.getItem(key);
 
     if (item) {

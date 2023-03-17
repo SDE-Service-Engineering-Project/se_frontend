@@ -1,16 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {AuthService} from '../../services/http/auth.service';
-import {StorageService} from '../../services/storage.service';
-import {ToastService} from '../../services/toast/toast.service';
-import {Router} from "@angular/router";
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/http/auth.service';
+import { StorageService } from '../../services/storage.service';
+import { ToastService } from '../../services/toast/toast.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
@@ -21,11 +21,7 @@ export class LoginComponent implements OnInit {
     private storageService: StorageService,
     private toastService: ToastService,
     private router: Router
-  ) {
-  }
-
-  ngOnInit(): void {
-  }
+  ) {}
 
   submitLogin() {
     if (this.loginForm.invalid) return;
@@ -33,12 +29,18 @@ export class LoginComponent implements OnInit {
     this.toastService.removeAll();
 
     this.authService
-      .login(this.loginForm.get('username')?.value!!, this.loginForm.get('password')?.value!!)
+      .login(
+        this.loginForm.get('username')?.value!!,
+        this.loginForm.get('password')?.value!!
+      )
       .subscribe({
         next: (data) => {
           this.storageService.saveToken(data);
-          this.router.navigate(['/home'])
-            .then(() => this.toastService.showDefaultSuccessToast("Login successfully"));
+          this.router
+            .navigate(['/home'])
+            .then(() =>
+              this.toastService.showDefaultSuccessToast('Login successfully')
+            );
         },
         error: (err) => {
           this.loginForm.get('password')?.setValue('');
@@ -46,6 +48,4 @@ export class LoginComponent implements OnInit {
         },
       });
   }
-
-
 }
