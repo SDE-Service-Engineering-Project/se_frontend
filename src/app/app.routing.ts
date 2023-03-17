@@ -34,6 +34,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'bookings',
+    loadChildren: () =>
+      import('./modules/booking/booking.module').then((m) => m.BookingModule),
+    canActivate: [AuthGuard],
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },

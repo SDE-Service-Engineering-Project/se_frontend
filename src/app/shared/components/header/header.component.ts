@@ -17,7 +17,7 @@ export class HeaderComponent {
     },
     {
       title: 'Rented Cars',
-      path: '/cars',
+      path: '/bookings',
       testId: 'nav-item-cars',
     },
     {

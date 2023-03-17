@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookingComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="container"
+    style="margin-top: 1rem;"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <app-booking-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card mb-3 mt-3"
+            style="max-width: 540px;"
+          >
+            <div
+              class="row no-gutters"
+            >
+              <div
+                class="col-md-4"
+              >
+                <img
+                  alt="car"
+                  class="card-img"
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+                />
+              </div>
+              <div
+                class="col-md-8"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                    Card ID: 1
+                  </h5>
+                  <p
+                    class="card-text"
+                  >
+                    Booking: Mar 17, 2023 to Mar 17, 2023 
+                  </p>
+                  <p
+                    class="card-text"
+                  >
+                    Price per day: €12,345.00 
+                  </p>
+                  <p
+                    class="card-text"
+                  >
+                    Total price
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-booking-card>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
