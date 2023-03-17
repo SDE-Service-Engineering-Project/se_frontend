@@ -11,6 +11,12 @@ exports[`DatePickerComponent should render the component 1`] = `
     <div
       class="col-12"
     >
+      <label
+        class="form-label"
+        for="pick-up-date"
+      >
+        Pick-up Date
+      </label>
       <div
         class="dp-hidden position-absolute"
       >
@@ -33,6 +39,7 @@ exports[`DatePickerComponent should render the component 1`] = `
       >
         <input
           class="form-control"
+          id="pick-up-date"
           name="dpFromDate"
           placeholder="yyyy-mm-dd"
         />
@@ -46,11 +53,18 @@ exports[`DatePickerComponent should render the component 1`] = `
     <div
       class="col-12"
     >
+      <label
+        class="form-label"
+        for="return-date"
+      >
+        Return Date
+      </label>
       <div
         class="input-group"
       >
         <input
           class="form-control"
+          id="return-date"
           name="dpToDate"
           placeholder="yyyy-mm-dd"
         />
@@ -62,20 +76,5 @@ exports[`DatePickerComponent should render the component 1`] = `
       </div>
     </div>
   </form>
-  <hr />
-  <pre>
-    From date model: {
-  "year": 2023,
-  "month": 3,
-  "day": 17
-}
-  </pre>
-  <pre>
-    To date model: {
-  "year": 2023,
-  "month": 3,
-  "day": 27
-}
-  </pre>
 </div>
 `;

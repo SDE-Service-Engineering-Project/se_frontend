@@ -1,5 +1,6 @@
 <form class="row row-cols-sm-auto">
   <div class="col-12">
+    <label for="pick-up-date" class="form-label">Pick-up Date</label>
     <div class="dp-hidden position-absolute">
       <div class="input-group">
         <input
@@ -16,7 +17,7 @@
           tabindex="-1"
         />
         <ng-template #t let-date let-focused="focused">
-					<span
+          <span
             class="custom-day"
             [class.focused]="focused"
             [class.range]="isRange(date)"
@@ -24,8 +25,8 @@
             (mouseenter)="hoveredDate = date"
             (mouseleave)="hoveredDate = null"
           >
-						{{ date.day }}
-					</span>
+            {{ date.day }}
+          </span>
         </ng-template>
       </div>
     </div>
@@ -33,30 +34,38 @@
       <input
         #dpFromDate
         class="form-control"
+        id="pick-up-date"
         placeholder="yyyy-mm-dd"
         name="dpFromDate"
         [value]="formatter.format(fromDate)"
         (input)="fromDate = validateInput(fromDate, dpFromDate.value)"
       />
-      <button data-testid="from-date-btn" class="btn btn-outline-secondary bi bi-calendar3" (click)="datepicker.toggle()" type="button"></button>
+      <button
+        data-testid="from-date-btn"
+        class="btn btn-outline-secondary bi bi-calendar3"
+        (click)="datepicker.toggle()"
+        type="button"
+      ></button>
     </div>
   </div>
   <div class="col-12">
+    <label for="return-date" class="form-label">Return Date</label>
     <div class="input-group">
       <input
         #dpToDate
+        id="return-date"
         class="form-control"
         placeholder="yyyy-mm-dd"
         name="dpToDate"
         [value]="formatter.format(toDate)"
         (input)="toDate = validateInput(toDate, dpToDate.value)"
       />
-      <button data-testid="to-date-btn" class="btn btn-outline-secondary bi bi-calendar3" (click)="datepicker.toggle()" type="button"></button>
+      <button
+        data-testid="to-date-btn"
+        class="btn btn-outline-secondary bi bi-calendar3"
+        (click)="datepicker.toggle()"
+        type="button"
+      ></button>
     </div>
   </div>
 </form>
-
-<hr />
-<pre>From date model: {{ fromDate | json }}</pre>
-<pre>To date model: {{ toDate | json }}</pre>
-
