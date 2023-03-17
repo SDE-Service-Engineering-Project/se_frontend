@@ -1,20 +1,17 @@
 import { ComponentFixture } from '@angular/core/testing';
-
-import { LandingPageComponent } from './landing-page.component';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
-import { MapsComponent } from '../../shared/components/maps/maps.component';
-import { MockModule } from 'ng-mocks';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MapsComponent } from './maps.component';
+import { MockModule } from 'ng-mocks';
 
-describe('LandingPageComponent', () => {
-  let component: LandingPageComponent;
-  let fixture: ComponentFixture<LandingPageComponent>;
-  let spectator: Spectator<LandingPageComponent>;
+describe('MapsComponent', () => {
+  let component: MapsComponent;
+  let fixture: ComponentFixture<MapsComponent>;
+  let spectator: Spectator<MapsComponent>;
 
   const createComponent = createComponentFactory({
-    component: LandingPageComponent,
+    component: MapsComponent,
     imports: [MockModule(GoogleMapsModule)],
-    declarations: [MapsComponent],
   });
 
   beforeEach(() => {

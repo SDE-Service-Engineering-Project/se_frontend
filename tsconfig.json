@@ -16,6 +16,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "skipLibCheck": true,
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
@@ -27,7 +28,11 @@
     "types": [
       "jest",
       "node",
-      "@types/testing_library_jest-dom"
+      "@types/testing_library_jest-dom",
+      "googlemaps"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "exclude": [
