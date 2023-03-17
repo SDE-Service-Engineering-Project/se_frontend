@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { NgbCollapse, NgbToast } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbCollapse,
+  NgbInputDatepicker,
+  NgbToast,
+} from '@ng-bootstrap/ng-bootstrap';
 import { ToastComponent } from './components/toast/toast.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,8 +20,14 @@ import { GoogleMapsModule } from '@angular/google-maps';
     ToastComponent,
     NotFoundComponent,
     MapsComponent,
+    DatePickerComponent,
   ],
-  exports: [HeaderComponent, ToastComponent, MapsComponent],
+  exports: [
+    HeaderComponent,
+    ToastComponent,
+    MapsComponent,
+    DatePickerComponent,
+  ],
   imports: [
     RouterLink,
     CommonModule,
@@ -23,6 +35,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     NgbCollapse,
     NgbToast,
     GoogleMapsModule,
+    NgbInputDatepicker,
+    FormsModule,
   ],
 })
 export class SharedModule {}

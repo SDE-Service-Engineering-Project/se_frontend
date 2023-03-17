@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePickerComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <form
+    class="row row-cols-sm-auto ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <div
+      class="col-12"
+    >
+      <div
+        class="dp-hidden position-absolute"
+      >
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control"
+            name="datepicker"
+            ngbdatepicker=""
+            outsidedays="hidden"
+            tabindex="-1"
+          />
+          
+          
+        </div>
+      </div>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          name="dpFromDate"
+          placeholder="yyyy-mm-dd"
+        />
+        <button
+          class="btn btn-outline-secondary bi bi-calendar3"
+          data-testid="from-date-btn"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      class="col-12"
+    >
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          name="dpToDate"
+          placeholder="yyyy-mm-dd"
+        />
+        <button
+          class="btn btn-outline-secondary bi bi-calendar3"
+          data-testid="to-date-btn"
+          type="button"
+        />
+      </div>
+    </div>
+  </form>
+  <hr />
+  <pre>
+    From date model: {
+  "year": 2023,
+  "month": 3,
+  "day": 17
+}
+  </pre>
+  <pre>
+    To date model: {
+  "year": 2023,
+  "month": 3,
+  "day": 27
+}
+  </pre>
+</div>
+`;
