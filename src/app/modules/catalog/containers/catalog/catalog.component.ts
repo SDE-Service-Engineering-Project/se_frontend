@@ -17,6 +17,6 @@ export class CatalogComponent {
   }
 
   navigateToCarDetails(car: Car) {
-    this.router.navigate(['catalog', car.id]);
+    this.router.navigate(['catalog', car.carId]);
   }
 }

@@ -10,6 +10,10 @@ import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component } from '@angular/core';
 import { of } from 'rxjs';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 
 @Component({
   template: '',
@@ -22,11 +26,14 @@ describe('CatalogComponent', () => {
   let fixture: ComponentFixture<CatalogComponent>;
   let navigateSpy: jest.SpyInstance;
   let router: Router;
+  let carDataService: CarDataService;
+  let httpTestingController: HttpTestingController;
 
   const createComponent = createComponentFactory({
     component: CatalogComponent,
     imports: [
       CarCardModule,
+      HttpClientTestingModule,
       RouterTestingModule.withRoutes([
         { path: '', component: RoutedTestComponent },
       ]),
@@ -36,13 +43,16 @@ describe('CatalogComponent', () => {
 
   beforeEach(() => {
     spectator = createComponent();
+    httpTestingController = spectator.inject(HttpTestingController);
     component = spectator.component;
     fixture = spectator.fixture;
     router = spectator.inject(Router);
+    carDataService = spectator.inject(CarDataService);
   });
 
   beforeEach(() => {
     component.cars$ = of(carsMock);
+    spectator.detectChanges();
   });
 
   it('should render the component', () => {
@@ -52,7 +62,7 @@ describe('CatalogComponent', () => {
   it('should navigate to the catalog details page when a car selection is emitted', () => {
     navigateSpy = jest.spyOn(router, 'navigate').mockImplementation();
     getCarCardComponent().carSelected.emit(carMock1);
-    expect(navigateSpy).toHaveBeenCalledWith(['catalog', carMock1.id]);
+    expect(navigateSpy).toHaveBeenCalledWith(['catalog', carMock1.carId]);
   });
 
   function getCarCardComponent(): CarCardComponent {
