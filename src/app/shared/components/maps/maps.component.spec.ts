@@ -1,20 +1,23 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-
-import {MapsComponent} from './maps.component';
+import { ComponentFixture } from '@angular/core/testing';
+import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MapsComponent } from './maps.component';
+import { MockModule } from 'ng-mocks';
 
 describe('MapsComponent', () => {
   let component: MapsComponent;
   let fixture: ComponentFixture<MapsComponent>;
+  let spectator: Spectator<MapsComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ MapsComponent ]
-    })
-    .compileComponents();
+  const createComponent = createComponentFactory({
+    component: MapsComponent,
+    imports: [MockModule(GoogleMapsModule)],
+  });
 
-    fixture = TestBed.createComponent(MapsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    spectator = createComponent();
+    fixture = spectator.fixture;
+    component = spectator.component;
   });
 
   it('should create', () => {

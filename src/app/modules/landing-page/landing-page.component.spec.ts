@@ -2,7 +2,9 @@ import { ComponentFixture } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
-import { carsMock } from '../../utils/testing/mocks/car.mock';
+import { MapsComponent } from '../../shared/components/maps/maps.component';
+import { MockModule } from 'ng-mocks';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -11,7 +13,8 @@ describe('LandingPageComponent', () => {
 
   const createComponent = createComponentFactory({
     component: LandingPageComponent,
-    imports: [],
+    imports: [MockModule(GoogleMapsModule)],
+    declarations: [MapsComponent],
   });
 
   beforeEach(() => {
