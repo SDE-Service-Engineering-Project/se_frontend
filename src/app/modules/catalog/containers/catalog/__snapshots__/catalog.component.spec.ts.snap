@@ -1,0 +1,690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="container"
+    style="margin-top: 1rem;"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="VW Golf"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                VW Golf
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2020
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 100 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Opel Kadett"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Opel Kadett
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2014
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 200 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Mercedes A-Class"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Mercedes A-Class
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2018
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 300 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="VW Golf"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                VW Golf
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2020
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 100 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Opel Kadett"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Opel Kadett
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2014
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 200 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Mercedes A-Class"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Mercedes A-Class
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2018
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 300 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="VW Golf"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                VW Golf
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2020
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 100 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Opel Kadett"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Opel Kadett
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2014
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 200 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Mercedes A-Class"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Mercedes A-Class
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2018
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 300 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="VW Golf"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                VW Golf
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Golf
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2020
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 100 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Opel Kadett"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Opel Kadett
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: Kadett
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2014
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 200 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      <div
+        class="col"
+      >
+        <app-car-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+            <img
+              alt="Mercedes A-Class"
+              class="card-img-top"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+            />
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Mercedes A-Class
+              </h5>
+              <p
+                class="card-text"
+              >
+                Brand: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Model: A-Class
+              </p>
+              <p
+                class="card-text"
+              >
+                Manufacture Year: 2018
+              </p>
+              <p
+                class="card-text"
+              >
+                <b>
+                  Price:
+                </b>
+                 300 / EUR
+              </p>
+              <button
+                class="btn btn-primary"
+                style="float: right;"
+              >
+                Rent
+              </button>
+            </div>
+          </div>
+        </app-car-card>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;

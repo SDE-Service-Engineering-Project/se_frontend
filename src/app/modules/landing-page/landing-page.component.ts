@@ -1,12 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.sass']
+  styleUrls: ['./landing-page.component.sass'],
 })
-export class LandingPageComponent {
-
-
-
-}
+export class LandingPageComponent {}
