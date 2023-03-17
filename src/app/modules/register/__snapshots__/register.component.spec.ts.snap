@@ -147,6 +147,7 @@ exports[`RegisterComponent should render the component 1`] = `
                       >
                         <button
                           class="btn btn-theme form-control"
+                          data-testid="register-btn"
                           disabled=""
                           id="register-btn"
                           type="submit"
@@ -177,10 +178,10 @@ exports[`RegisterComponent should render the component 1`] = `
                       <p
                         class="lead text-white"
                       >
-                        "Where cars are still cars."
+                        "Float like a Cadillac, sting like a Beemer."
                       </p>
                       <p>
-                        - Godfather (CEO)
+                        - Lightning McQueen
                       </p>
                     </div>
                   </div>
@@ -194,6 +195,7 @@ exports[`RegisterComponent should render the component 1`] = `
             Already have an account? Login 
             <a
               class="text-primary ml-1"
+              href="/"
               rel="noopener"
               routerlink=""
             >

@@ -4,7 +4,7 @@ exports[`AppComponent should render the app 1`] = `
 <div
   id="root0"
 >
-  <app-header />
+  
   <app-toast
     aria-atomic="true"
     aria-live="polite"

@@ -36,6 +36,10 @@ describe('HeaderComponent', () => {
           component: RoutedTestComponent,
         },
         {
+          path: 'catalog',
+          component: RoutedTestComponent,
+        },
+        {
           path: '',
           component: RoutedTestComponent,
         },
@@ -60,6 +64,9 @@ describe('HeaderComponent', () => {
     spectator.click(getNavigationItem('maps'));
     spectator.detectChanges();
     expect(spectator.inject(Location).path()).toBe('/maps');
+    spectator.click(getNavigationItem('catalog'));
+    spectator.detectChanges();
+    expect(spectator.inject(Location).path()).toBe('/catalog');
   });
 
   //TODO: add expectation of real logout i.e. token was removed, etc.
