@@ -2,43 +2,53 @@
   <div class="details__title row">
     <h1>{{ car.model }} {{ car.brand }}</h1>
   </div>
-  <div class="row">
-    <div class="col">
+  <div class="row details__row-1">
+    <div class="col details__row-1__image">
       <img
         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
         class="card-img-top"
         alt="{{ car.brand }} {{ car.model }}"
       />
     </div>
-    <div class="col">
+    <div class="col details__row-1__date-picker">
       <div class="row">
         <app-date-picker
           (startDate)="setStartDate($event)"
           (endDate)="setEndDate($event)"
         ></app-date-picker>
       </div>
-      <div class="row">
-        <div class="col"><p>Total Per Day</p></div>
+      <div class="row details__row-1__day-price">
+        <div class="col">Total Per Day:</div>
         <div class="col">{{ car.currency }} {{ car.price }}</div>
       </div>
-      <div class="row">
-        <hr />
+      <div class="row details__row-1__separator">
+        <hr/>
       </div>
-      <div class="row">
-        <div class="col"><p>Total</p></div>
-        <div class="col">{{ getTotalPrice() }}</div>
+      <div class="row details__row-1__total-price">
+        <div class="col">Total:</div>
+        <div class="col">{{car.currency}} {{ getTotalPrice() }}</div>
       </div>
-      <div class="row">
+      <div class="row details__row-1__rsv-btn">
         <button class="btn btn-primary" [disabled]="reservationBtnDisabled" (click)="reserveCar()">Reserve Car</button>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <p class="card-text">Brand: {{car.model}}</p>
-      <p class="card-text">Model: {{car.model}}</p>
-      <p class="card-text">Manufacture Year: {{car.constructionYear}}</p>
-      <p class="card-text"><b>Price:</b> {{car.price}} / {{car.currency}}</p>
+  <div class="row details__row-2">
+    <div class="row">
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">Brand:</p></div>
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">{{car.brand}}</p></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">Model:</p></div>
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">{{car.model}}</p></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">Manufacture Year:</p></div>
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">{{car.constructionYear}}</p></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">Price per day:</p></div>
+      <div class="col-sm-2"><p class="card-text details__row-2__car-properties">{{car.price}}</p></div>
     </div>
   </div>
 </div>

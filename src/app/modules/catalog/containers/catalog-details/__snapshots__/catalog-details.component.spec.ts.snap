@@ -15,10 +15,10 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
       </h1>
     </div>
     <div
-      class="row"
+      class="row details__row-1"
     >
       <div
-        class="col"
+        class="col details__row-1__image"
       >
         <img
           alt=" "
@@ -27,7 +27,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
         />
       </div>
       <div
-        class="col"
+        class="col details__row-1__date-picker"
       >
         <div
           class="row"
@@ -108,14 +108,12 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           </app-date-picker>
         </div>
         <div
-          class="row"
+          class="row details__row-1__day-price"
         >
           <div
             class="col"
           >
-            <p>
-              Total Per Day
-            </p>
+            Total Per Day:
           </div>
           <div
             class="col"
@@ -124,28 +122,26 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           </div>
         </div>
         <div
-          class="row"
+          class="row details__row-1__separator"
         >
           <hr />
         </div>
         <div
-          class="row"
+          class="row details__row-1__total-price"
         >
           <div
             class="col"
           >
-            <p>
-              Total
-            </p>
+            Total:
           </div>
           <div
             class="col"
           >
-            10
+             10
           </div>
         </div>
         <div
-          class="row"
+          class="row details__row-1__rsv-btn"
         >
           <button
             class="btn btn-primary"
@@ -157,34 +153,95 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
       </div>
     </div>
     <div
-      class="row"
+      class="row details__row-2"
     >
       <div
-        class="col"
+        class="row"
       >
-        <p
-          class="card-text"
+        <div
+          class="col-sm-2"
         >
-          Brand: 
-        </p>
-        <p
-          class="card-text"
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            Brand:
+          </p>
+        </div>
+        <div
+          class="col-sm-2"
         >
-          Model: 
-        </p>
-        <p
-          class="card-text"
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            
+          </p>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-2"
         >
-          Manufacture Year: 
-        </p>
-        <p
-          class="card-text"
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            Model:
+          </p>
+        </div>
+        <div
+          class="col-sm-2"
         >
-          <b>
-            Price:
-          </b>
-            / 
-        </p>
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            
+          </p>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-2"
+        >
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            Manufacture Year:
+          </p>
+        </div>
+        <div
+          class="col-sm-2"
+        >
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            
+          </p>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-2"
+        >
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            Price per day:
+          </p>
+        </div>
+        <div
+          class="col-sm-2"
+        >
+          <p
+            class="card-text details__row-2__car-properties"
+          >
+            
+          </p>
+        </div>
       </div>
     </div>
   </div>
