@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgbCalendar, NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { CarDataService } from '../../services/car-data.service';
 import { Car } from '../../../../models/car';
@@ -12,7 +12,7 @@ import { ToastService } from '../../../../services/toast/toast.service';
   templateUrl: './catalog-details.component.html',
   styleUrls: ['./catalog-details.component.sass'],
 })
-export class CatalogDetailsComponent implements OnDestroy {
+export class CatalogDetailsComponent implements OnInit, OnDestroy {
   car: Car = {} as Car;
   reservation: Reservation = {} as Reservation;
   reservationBtnDisabled = true;
@@ -28,12 +28,22 @@ export class CatalogDetailsComponent implements OnDestroy {
   ) {
     this.startDate = calendar.getToday();
     this.endDate = calendar.getNext(calendar.getToday(), 'd', 10);
+  }
 
+  ngOnInit() {
+    this.setCarById();
+  }
+
+  setCarById(): void {
     this.subscription = this.carService
-      .fetchCarById(this.route.snapshot.params['carId'])
+      .fetchCarById(this.getCarId())
       .subscribe((car) => {
         this.car = car;
       });
+  }
+
+  getCarId(): number {
+    return this.route.snapshot.params['carId'];
   }
 
   reserveCar(): void {
@@ -45,34 +55,42 @@ export class CatalogDetailsComponent implements OnDestroy {
     this.reservation.startDate = this.startDate;
     this.reservation.endDate = this.endDate;
     this.reservation.totalPrice = this.getTotalPrice();
-    this.toastService.showDefaultSuccessToast('Car reserved!');
-    console.log(this.reservation);
   }
 
   setStartDate(date: NgbDate): void {
     this.startDate = date;
-    this.checkIfDatesAreValid();
   }
 
   setEndDate(date: NgbDate): void {
     this.endDate = date;
-    this.checkIfDatesAreValid();
   }
 
   getTotalPrice(): number {
     if (!this.startDate || !this.endDate) {
       return 0;
     }
-    return this.endDate.day - this.startDate.day;
+    return (
+      (this.calcDaysDiff(this.startDate, this.endDate) + 1) * this.car.price
+    );
   }
 
   checkIfDatesAreValid(): boolean {
-    return this.startDate && this.endDate
-      ? (this.reservationBtnDisabled = false)
-      : (this.reservationBtnDisabled = true);
+    return !!this.startDate && !!this.endDate;
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  createDateFromNgbDate(ngbDate: NgbDate): Date {
+    return new Date(Date.UTC(ngbDate.year, ngbDate.month - 1, ngbDate.day));
+  }
+
+  calcDaysDiff(startDate: NgbDate, endDate: NgbDate): number {
+    const fromDate: Date = this.createDateFromNgbDate(startDate);
+    const toDate: Date = this.createDateFromNgbDate(endDate);
+    return Math.floor(
+      Math.abs(<any>fromDate - <any>toDate) / (1000 * 60 * 60 * 24)
+    );
   }
 }

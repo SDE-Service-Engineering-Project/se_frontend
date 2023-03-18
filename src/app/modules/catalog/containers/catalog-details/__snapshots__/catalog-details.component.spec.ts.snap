@@ -11,17 +11,17 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
       class="details__title row"
     >
       <h1>
-         
+        Golf VW
       </h1>
     </div>
     <div
-      class="row details__row-1"
+      class="row row-cols-auto details__row-1"
     >
       <div
         class="col details__row-1__image"
       >
         <img
-          alt=" "
+          alt="VW Golf"
           class="card-img-top"
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
         />
@@ -118,7 +118,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           <div
             class="col"
           >
-             
+            EUR 100
           </div>
         </div>
         <div
@@ -137,7 +137,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           <div
             class="col"
           >
-             10
+            EUR 1100
           </div>
         </div>
         <div
@@ -145,9 +145,9 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
         >
           <button
             class="btn btn-primary"
-            disabled=""
+            data-testid="reserve-btn"
           >
-            Reserve Car
+             Reserve Car 
           </button>
         </div>
       </div>
@@ -156,93 +156,100 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
       class="row details__row-2"
     >
       <div
-        class="row"
+        class="col"
       >
         <div
-          class="col-sm-2"
+          class="row row-cols-2"
         >
-          <p
-            class="card-text details__row-2__car-properties"
+          <div
+            class="col"
           >
-            Brand:
-          </p>
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Brand:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               VW 
+            </p>
+          </div>
         </div>
         <div
-          class="col-sm-2"
+          class="row row-cols-2"
         >
-          <p
-            class="card-text details__row-2__car-properties"
+          <div
+            class="col"
           >
-            
-          </p>
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Model:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               Golf 
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               Manufacture Year: 
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               2020 
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Price per day:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               100 
+            </p>
+          </div>
         </div>
       </div>
       <div
-        class="row"
-      >
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            Model:
-          </p>
-        </div>
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            
-          </p>
-        </div>
-      </div>
-      <div
-        class="row"
-      >
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            Manufacture Year:
-          </p>
-        </div>
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            
-          </p>
-        </div>
-      </div>
-      <div
-        class="row"
-      >
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            Price per day:
-          </p>
-        </div>
-        <div
-          class="col-sm-2"
-        >
-          <p
-            class="card-text details__row-2__car-properties"
-          >
-            
-          </p>
-        </div>
-      </div>
+        class="col"
+      />
     </div>
   </div>
 </div>
