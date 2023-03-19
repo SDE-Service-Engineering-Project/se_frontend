@@ -5,7 +5,7 @@ exports[`BookingComponent should render the component 1`] = `
   id="root0"
 >
   <div
-    class="card mb-3 mt-3"
+    class="card mb-2 mt-1"
     style="max-width: 540px;"
   >
     <div
@@ -40,6 +40,11 @@ exports[`BookingComponent should render the component 1`] = `
             class="card-text"
           >
             Total price:  
+          </p>
+          <p
+            class="card-text"
+          >
+            Status:  
           </p>
         </div>
       </div>
