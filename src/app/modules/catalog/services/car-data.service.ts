@@ -14,4 +14,8 @@ export class CarDataService {
   fetchCars(): Observable<Car[]> {
     return this.http.get<Car[]>(CAR_API);
   }
+
+  fetchCarById(carId: number): Observable<Car> {
+    return this.http.get<Car>(CAR_API + carId);
+  }
 }

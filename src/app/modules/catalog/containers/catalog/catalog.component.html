@@ -4,7 +4,11 @@
 
   <div class="row">
     <div class="col" *ngFor="let car of cars$ | async">
-      <app-car-card style="margin: 1rem" [car]="car" (carSelected)="navigateToCarDetails($event)"></app-car-card>
+      <app-car-card
+        style="margin: 1rem"
+        [car]="car"
+        (carSelected)="navigateToCarDetails($event)"
+      ></app-car-card>
     </div>
 
     <div class="container mt-1" *ngIf="(cars$ | async)?.length === 0">
