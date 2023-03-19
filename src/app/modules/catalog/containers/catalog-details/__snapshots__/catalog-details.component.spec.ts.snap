@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogDetailsComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="details container"
+  >
+    <div
+      class="details__title row"
+    >
+      <h1>
+        Golf VW
+      </h1>
+    </div>
+    <div
+      class="row row-cols-auto details__row-1"
+    >
+      <div
+        class="col details__row-1__image"
+      >
+        <img
+          alt="VW Golf"
+          class="card-img-top"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+        />
+      </div>
+      <div
+        class="col details__row-1__date-picker"
+      >
+        <div
+          class="row"
+        >
+          <app-date-picker>
+            <form
+              class="row row-cols-sm-auto ng-untouched ng-pristine ng-valid"
+              novalidate=""
+            >
+              <div
+                class="col-12"
+              >
+                <label
+                  class="form-label"
+                  for="pick-up-date"
+                >
+                  Pick-up Date
+                </label>
+                <div
+                  class="dp-hidden position-absolute"
+                >
+                  <div
+                    class="input-group"
+                  >
+                    <input
+                      class="form-control"
+                      name="datepicker"
+                      ngbdatepicker=""
+                      outsidedays="hidden"
+                      tabindex="-1"
+                    />
+                    
+                    
+                  </div>
+                </div>
+                <div
+                  class="input-group"
+                >
+                  <input
+                    class="form-control"
+                    id="pick-up-date"
+                    name="dpFromDate"
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <button
+                    class="btn btn-outline-secondary bi bi-calendar3"
+                    data-testid="from-date-btn"
+                    type="button"
+                  />
+                </div>
+              </div>
+              <div
+                class="col-12"
+              >
+                <label
+                  class="form-label"
+                  for="return-date"
+                >
+                  Return Date
+                </label>
+                <div
+                  class="input-group"
+                >
+                  <input
+                    class="form-control"
+                    id="return-date"
+                    name="dpToDate"
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <button
+                    class="btn btn-outline-secondary bi bi-calendar3"
+                    data-testid="to-date-btn"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </form>
+          </app-date-picker>
+        </div>
+        <div
+          class="row details__row-1__day-price"
+        >
+          <div
+            class="col"
+          >
+            Total Per Day:
+          </div>
+          <div
+            class="col"
+          >
+            EUR 100
+          </div>
+        </div>
+        <div
+          class="row details__row-1__separator"
+        >
+          <hr />
+        </div>
+        <div
+          class="row details__row-1__total-price"
+        >
+          <div
+            class="col"
+          >
+            Total:
+          </div>
+          <div
+            class="col"
+          >
+            EUR 1100
+          </div>
+        </div>
+        <div
+          class="row details__row-1__rsv-btn"
+        >
+          <button
+            class="btn btn-primary"
+            data-testid="reserve-btn"
+          >
+             Reserve Car 
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row details__row-2"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Brand:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               VW 
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Model:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               Golf 
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               Manufacture Year: 
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               2020 
+            </p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-2"
+        >
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+              Price per day:
+            </p>
+          </div>
+          <div
+            class="col"
+          >
+            <p
+              class="card-text details__row-2__car-properties"
+            >
+               100 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col"
+      />
+    </div>
+  </div>
+</div>
+`;

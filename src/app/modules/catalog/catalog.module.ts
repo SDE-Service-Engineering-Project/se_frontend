@@ -4,9 +4,16 @@ import { CatalogDetailsComponent } from './containers/catalog-details/catalog-de
 import { CarCardModule } from './components/car-card/car-card.module';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { CatalogRoutingModule } from './config/catalog.routing';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [CatalogComponent, CatalogDetailsComponent],
-  imports: [CatalogRoutingModule, CarCardModule, AsyncPipe, CommonModule],
+  imports: [
+    CatalogRoutingModule,
+    CarCardModule,
+    AsyncPipe,
+    CommonModule,
+    SharedModule,
+  ],
 })
 export class CatalogModule {}
