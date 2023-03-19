@@ -39,12 +39,7 @@ exports[`BookingComponent should render the component 1`] = `
           <p
             class="card-text"
           >
-            Price per day:  
-          </p>
-          <p
-            class="card-text"
-          >
-            Total price
+            Total price:  
           </p>
         </div>
       </div>

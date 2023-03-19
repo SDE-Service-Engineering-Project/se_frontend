@@ -47,17 +47,12 @@ exports[`BookingComponent should render the component 1`] = `
                   <p
                     class="card-text"
                   >
-                    Booking: Mar 17, 2023 to Mar 17, 2023 
+                    Booking: Mar 19, 2023 to Mar 19, 2023 
                   </p>
                   <p
                     class="card-text"
                   >
-                    Price per day: €12,345.00 
-                  </p>
-                  <p
-                    class="card-text"
-                  >
-                    Total price
+                    Total price: €12,345.00 
                   </p>
                 </div>
               </div>
@@ -65,6 +60,7 @@ exports[`BookingComponent should render the component 1`] = `
           </div>
         </app-booking-card>
       </div>
+      
       
     </div>
   </div>
