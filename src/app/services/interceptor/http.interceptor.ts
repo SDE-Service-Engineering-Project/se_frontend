@@ -63,7 +63,7 @@ export class HttpInterceptor implements HttpInterceptor {
         if (error instanceof HttpErrorResponse && error.status === 401) {
           return this.handle401Error(request, next);
         }
-        return throwError(error);
+        return throwError(() => new Error(error));
       })
     );
   }
