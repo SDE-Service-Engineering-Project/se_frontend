@@ -1,0 +1,7 @@
+<div class="container" style="margin-top: 1rem">
+  <div class="row">
+    <div class="col" *ngFor="let booking of bookings$ | async">
+      <app-booking-card style="margin: 1rem" [booking]="booking"></app-booking-card>
+    </div>
+  </div>
+</div>

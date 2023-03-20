@@ -10,7 +10,6 @@ import {
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   template: '',
@@ -28,7 +27,7 @@ describe('HeaderComponent', () => {
       NgbCollapseModule,
       RouterTestingModule.withRoutes([
         {
-          path: 'cars',
+          path: 'bookings',
           component: RoutedTestComponent,
         },
         {
@@ -58,9 +57,9 @@ describe('HeaderComponent', () => {
   });
 
   it('should navigate to the correct routes', () => {
-    spectator.click(getNavigationItem('cars'));
+    spectator.click(getNavigationItem('bookings'));
     spectator.detectChanges();
-    expect(spectator.inject(Location).path()).toBe('/cars');
+    expect(spectator.inject(Location).path()).toBe('/bookings');
     spectator.click(getNavigationItem('maps'));
     spectator.detectChanges();
     expect(spectator.inject(Location).path()).toBe('/maps');
