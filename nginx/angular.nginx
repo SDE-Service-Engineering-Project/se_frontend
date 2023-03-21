@@ -1,0 +1,27 @@
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  server_name _;
+  server_tokens off;
+
+  #Client Settings
+  client_max_body_size 25M;
+  gzip off;
+
+  #Root Folder and Index
+  root /usr/share/nginx/frontend;
+  index index.html;
+
+  location / {
+    try_files $uri $uri /index.html;
+  }
+
+  location /nginx_status {
+    stub_status on;
+    access_log off;
+    allow 127.0.0.1;
+    allow ::1;
+    deny all;
+  }
+
+}

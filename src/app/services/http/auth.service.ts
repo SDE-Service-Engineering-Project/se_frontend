@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthResponse } from '../../models/AuthResponse';
+import { environment } from '../../../environments/environment';
 
-export const AUTH_API = 'http://localhost:8080/api/v1/auth/';
+export const AUTH_API = `${environment.baseUrl}auth/`;
 
 @Injectable({
   providedIn: 'root',
