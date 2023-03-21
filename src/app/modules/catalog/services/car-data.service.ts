@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Car } from '../../../models/car';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
 
-export const CAR_API = 'http://localhost:8080/api/v1/cars/';
+export const CAR_API = `${environment.baseUrl}cars/`;
 
 @Injectable({
   providedIn: 'root',
