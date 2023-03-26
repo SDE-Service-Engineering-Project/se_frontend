@@ -17,6 +17,8 @@ env:
   DEPLOYMENT_NAME: se-frontend-part1
   INTERNAL_PORT: 80 # ADAPT!
   EXTERNAL_PORT: 31648 # ADAPT!
+  DOCKER_USER: ${{ secrets.DOCKER_USER }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
   setup-build-publish-deploy:
