@@ -4,6 +4,7 @@ import { AuthService } from '../../services/http/auth.service';
 import { StorageService } from '../../services/storage.service';
 import { ToastService } from '../../services/toast/toast.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -42,7 +43,7 @@ export class LoginComponent {
               this.toastService.showDefaultSuccessToast('Login successfully')
             );
         },
-        error: (err) => {
+        error: (err: HttpErrorResponse) => {
           this.loginForm.get('password')?.setValue('');
           this.toastService.showDefaultErrorToast(err.error.message);
         },
