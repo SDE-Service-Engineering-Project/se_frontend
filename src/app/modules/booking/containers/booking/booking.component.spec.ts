@@ -9,12 +9,7 @@ import {
 import { BookingComponent } from './booking.component';
 import { BookingCardModule } from '../../components/booking-card.module';
 import { mockBookings } from '../../../../utils/testing/mocks/booking.mock';
-import { BookingDataService } from '../../service/booking-data.service';
-
-@Component({
-  template: '',
-})
-class RoutedTestComponent {}
+import { BookingDataService } from '../../../../services/booking/booking-data.service';
 
 describe('BookingComponent', () => {
   let spectator: Spectator<BookingComponent>;

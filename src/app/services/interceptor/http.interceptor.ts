@@ -20,7 +20,7 @@ import {
   REFRESH_TOKEN,
   StorageService,
   USER_NAME,
-} from '../storage.service';
+} from '../storage/storage.service';
 import { AuthService } from '../http/auth.service';
 import { AuthResponse } from '../../models/AuthResponse';
 import { ToastService } from '../toast/toast.service';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/http/auth.service';
-import { StorageService } from '../../services/storage.service';
+import { StorageService } from '../../services/storage/storage.service';
 import { ToastService } from '../../services/toast/toast.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';

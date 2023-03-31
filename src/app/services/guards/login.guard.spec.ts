@@ -1,7 +1,7 @@
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { StorageService } from '../storage.service';
+import { StorageService } from '../storage/storage.service';
 import { LoginGuard } from './login.guard';
 import { LandingPageModule } from '../../modules/landing-page/landing-page.module';
 
