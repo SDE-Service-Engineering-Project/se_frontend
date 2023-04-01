@@ -1,27 +1,30 @@
 import { Booking } from '../../../models/booking';
+import { carMock1 } from './car.mock';
 
 export const mockBooking: Booking = {
-  bookedUntil: new Date('2020-02-20T12:01:04.753Z'),
+  daysToRent: 1,
+  bookedFrom: '2020-02-20:01:04.753Z',
+  bookedUntil: '2020-02-20T12:01:04.753Z',
+  createdOn: '2020-02-14T12:01:04.753Z',
   bookingId: 1,
   bookingStatus: 'EXPIRED',
-  carId: '1',
-  createdOn: new Date('2020-02-24T12:01:04.753Z'),
-  currency: 'EUR',
-  precision: 2,
+  carId: carMock1.carId,
+  currency: 'USD',
   price: 12345,
-  userId: '1',
+  userId: 1,
 };
 
 export const mockBooking2: Booking = {
-  bookedUntil: new Date(),
+  bookedFrom: '2020-02-20:01:04.753Z',
+  bookedUntil: '2020-02-30T12:01:04.753Z',
+  createdOn: '2020-02-14T12:01:04.753Z',
+  daysToRent: 10,
   bookingId: 1,
   bookingStatus: 'BOOKED',
-  carId: '1',
-  createdOn: new Date(),
-  currency: 'EUR',
-  precision: 2,
+  carId: carMock1.carId,
+  currency: 'USD',
   price: 12345,
-  userId: '1',
+  userId: 1,
 };
 
 export const mockBookings: Booking[] = [

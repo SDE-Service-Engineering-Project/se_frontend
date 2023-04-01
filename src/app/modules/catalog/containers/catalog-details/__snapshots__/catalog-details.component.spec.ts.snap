@@ -145,9 +145,9 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
         >
           <button
             class="btn btn-primary"
-            data-testid="reserve-btn"
+            data-testid="book-car-btn"
           >
-             Reserve Car 
+             Book Car 
           </button>
         </div>
       </div>

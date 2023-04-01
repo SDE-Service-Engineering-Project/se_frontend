@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Booking } from '../../../../models/booking';
-import { BookingDataService } from '../../service/booking-data.service';
+import { BookingDataService } from '../../../../services/booking/booking-data.service';
 
 @Component({
   selector: 'app-booking',

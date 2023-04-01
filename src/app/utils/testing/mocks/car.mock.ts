@@ -7,7 +7,6 @@ export const carMock1: Car = {
   createdOn: '',
   currency: 'EUR',
   model: 'Golf',
-  precision: 0,
   price: 100,
 };
 export const carMock2: Car = {
@@ -17,7 +16,6 @@ export const carMock2: Car = {
   createdOn: '',
   currency: 'EUR',
   model: 'Kadett',
-  precision: 0,
   price: 200,
 };
 export const carMock3: Car = {
@@ -27,7 +25,6 @@ export const carMock3: Car = {
   createdOn: '',
   currency: 'EUR',
   model: 'A-Class',
-  precision: 0,
   price: 300,
 };
 

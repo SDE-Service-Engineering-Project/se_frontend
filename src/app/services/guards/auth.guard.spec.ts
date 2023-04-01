@@ -3,7 +3,7 @@ import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 import { AuthGuard } from './auth.guard';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { StorageService } from '../storage.service';
+import { StorageService } from '../storage/storage.service';
 
 describe('AuthGuard', () => {
   let spectator: SpectatorService<AuthGuard>;

@@ -20,7 +20,7 @@ import {
   REFRESH_TOKEN,
   StorageService,
   USER_NAME,
-} from '../storage.service';
+} from '../storage/storage.service';
 import { AuthService } from '../http/auth.service';
 import { AuthResponse } from '../../models/AuthResponse';
 import { ToastService } from '../toast/toast.service';
@@ -63,7 +63,7 @@ export class HttpInterceptor implements HttpInterceptor {
         if (error instanceof HttpErrorResponse && error.status === 401) {
           return this.handle401Error(request, next);
         }
-        return throwError(() => new Error(error));
+        return throwError(() => new HttpErrorResponse(error));
       })
     );
   }

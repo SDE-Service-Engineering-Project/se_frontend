@@ -9,12 +9,22 @@ import {
 import { NgbDate, NgbInputDatepicker } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../../../../shared/shared.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { carMock1 } from '../../../../utils/testing/mocks/car.mock';
 import { CarDataService } from '../../services/car-data.service';
 import { DatePickerComponent } from '../../../../shared/components/date-picker/date-picker.component';
 import { ToastService } from '../../../../services/toast/toast.service';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
+import { BookingDataService } from '../../../../services/booking/booking-data.service';
+import { mockBooking } from '../../../../utils/testing/mocks/booking.mock';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Component } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+
+@Component({
+  template: '',
+})
+class RoutedTestComponent {}
 
 describe('CatalogDetailsComponent', () => {
   let component: CatalogDetailsComponent;
@@ -23,6 +33,8 @@ describe('CatalogDetailsComponent', () => {
   let date: NgbDate;
   let toastService: ToastService;
   let carDataService: CarDataService;
+  let bookingService: BookingDataService;
+  let router: Router;
 
   const createComponent = createComponentFactory({
     component: CatalogDetailsComponent,
@@ -32,10 +44,17 @@ describe('CatalogDetailsComponent', () => {
       SharedModule,
       RouterModule,
       HttpClientTestingModule,
+      RouterTestingModule.withRoutes([
+        {
+          path: 'bookings',
+          component: RoutedTestComponent,
+        },
+      ]),
     ],
     providers: [
       CarDataService,
       ToastService,
+      BookingDataService,
       {
         provide: ActivatedRoute,
         useValue: {
@@ -119,36 +138,63 @@ describe('CatalogDetailsComponent', () => {
   it('should calculate the difference between two dates', () => {
     const date1 = new NgbDate(2021, 1, 1);
     const date2 = new NgbDate(2021, 1, 2);
-    expect(component.calcDaysDiff(date1, date2)).toEqual(1);
+    expect(component.calcDuration(date1, date2)).toEqual(1);
   });
 
-  describe('reserveCar', () => {
+  describe('bookCar', () => {
     let toastSpy: jest.SpyInstance;
+    let navigateSpy: jest.SpyInstance;
 
     beforeEach(() => {
       toastService = spectator.inject(ToastService);
+      bookingService = spectator.inject(BookingDataService);
+      router = spectator.inject(Router);
     });
 
     it('should show a error toast if the dates are not valid', () => {
       toastSpy = jest.spyOn(toastService, 'showDefaultErrorToast');
       component.startDate = null;
-      getReserveBtn().click();
+      getBookingBtn().click();
       expect(toastSpy).toHaveBeenCalledWith('Ups something went wrong!');
-      expect(component.reservation).toEqual({});
     });
 
-    //TODO: add expectation for backend call
-    it('should set the reservation properties', () => {
+    //TODO: fix date conversion difference between local and CI
+    // it('should convert NgbDate to a string', () => {
+    //   expect(
+    //     component.convertNgbDateToDateString(new NgbDate(2021, 1, 1))
+    //   ).toEqual('2020-12-31T23:00:00.000Z');
+    // });
+
+    it('should book a car', () => {
+      toastSpy = jest.spyOn(toastService, 'showDefaultSuccessToast');
+      navigateSpy = jest.spyOn(router, 'navigate');
+      jest.spyOn(component, 'buildBooking').mockReturnValue(mockBooking);
+      jest
+        .spyOn(bookingService, 'createBooking')
+        .mockReturnValue(of(mockBooking));
       component.startDate = new NgbDate(2021, 1, 1);
       component.endDate = new NgbDate(2021, 1, 2);
-      component.setCarById();
-      getReserveBtn().click();
-      expect(component.reservation).toEqual({
-        carId: carMock1.carId,
-        startDate: component.startDate,
-        endDate: component.endDate,
-        totalPrice: 200,
-      });
+      getBookingBtn().click();
+      spectator.detectChanges();
+      expect(component.buildBooking).toHaveBeenCalled();
+      expect(toastSpy).toHaveBeenCalledWith('Car booked successfully!');
+      expect(navigateSpy).toHaveBeenCalledWith(['/bookings']);
+    });
+
+    it('should show a error toast if the booking fails', () => {
+      toastSpy = jest.spyOn(toastService, 'showDefaultErrorToast');
+      jest.spyOn(component, 'buildBooking').mockReturnValue(mockBooking);
+      jest
+        .spyOn(bookingService, 'createBooking')
+        .mockReturnValue(
+          throwError({ error: { message: 'error' } } as HttpErrorResponse)
+        );
+      component.startDate = new NgbDate(2021, 1, 1);
+      component.endDate = new NgbDate(2021, 1, 2);
+      getBookingBtn().click();
+      spectator.detectChanges();
+      expect(component.buildBooking).toHaveBeenCalled();
+      expect(toastSpy).toHaveBeenCalledWith('error');
     });
   });
 
@@ -156,7 +202,7 @@ describe('CatalogDetailsComponent', () => {
     return spectator.query(DatePickerComponent) as DatePickerComponent;
   }
 
-  function getReserveBtn(): HTMLButtonElement {
-    return spectator.query(byTestId('reserve-btn')) as HTMLButtonElement;
+  function getBookingBtn(): HTMLButtonElement {
+    return spectator.query(byTestId('book-car-btn')) as HTMLButtonElement;
   }
 });

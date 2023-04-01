@@ -5,6 +5,5 @@ export interface Car {
   model: string;
   constructionYear: number;
   price: number;
-  precision: number;
   currency: string;
 }

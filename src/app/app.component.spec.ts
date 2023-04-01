@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MockComponent } from 'ng-mocks';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ToastComponent } from './shared/components/toast/toast.component';
-import { StorageService } from './services/storage.service';
+import { StorageService } from './services/storage/storage.service';
 
 describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
