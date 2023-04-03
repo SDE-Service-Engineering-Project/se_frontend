@@ -20,6 +20,7 @@ import { mockBooking } from '../../../../utils/testing/mocks/booking.mock';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
+import { CurrencyService } from '../../../../services/currency/currency.service';
 
 @Component({
   template: '',
@@ -34,6 +35,7 @@ describe('CatalogDetailsComponent', () => {
   let toastService: ToastService;
   let carDataService: CarDataService;
   let bookingService: BookingDataService;
+  let currencyService: CurrencyService;
   let router: Router;
 
   const createComponent = createComponentFactory({
@@ -55,6 +57,7 @@ describe('CatalogDetailsComponent', () => {
       CarDataService,
       ToastService,
       BookingDataService,
+      CurrencyService,
       {
         provide: ActivatedRoute,
         useValue: {
@@ -73,6 +76,7 @@ describe('CatalogDetailsComponent', () => {
     component = spectator.component;
     fixture = spectator.fixture;
     carDataService = spectator.inject(CarDataService);
+    currencyService = spectator.inject(CurrencyService);
   });
 
   beforeEach(() => {
@@ -111,12 +115,39 @@ describe('CatalogDetailsComponent', () => {
     expect(component.getTotalPrice()).toEqual(0);
   });
 
-  it('should return the total price', () => {
+  it('should return the total price in USD if the currency is set to original', () => {
     component.startDate = new NgbDate(2021, 1, 1);
     component.endDate = new NgbDate(2021, 1, 2);
     component.setCarById();
     spectator.detectChanges();
-    expect(component.getTotalPrice()).toEqual(200);
+    expect(component.getTotalPrice(true)).toEqual(200);
+  });
+
+  it('should return the total price ', () => {
+    component.startDate = new NgbDate(2021, 1, 1);
+    component.endDate = new NgbDate(2021, 1, 2);
+    component.setCarById();
+    component.price = 50;
+    spectator.detectChanges();
+    expect(component.getTotalPrice(false)).toEqual(100);
+  });
+
+  it('should set the currency', () => {
+    const oldCurrencySpy = jest.spyOn(currencyService, 'setOldCurrency');
+    const currentCurrencySpy = jest.spyOn(
+      currencyService,
+      'setCurrentCurrency'
+    );
+    component.setCurrency('EUR');
+    expect(oldCurrencySpy).toHaveBeenCalledWith('USD');
+    expect(currentCurrencySpy).toHaveBeenCalledWith('EUR');
+  });
+
+  it('should set the price according to the currency', () => {
+    const currencySpy = jest.spyOn(currencyService, 'convertCurrency');
+    component.price = 100;
+    component.setCurrency('EUR');
+    expect(currencySpy).toHaveBeenCalledWith(100, 'USD', 'EUR');
   });
 
   it('should check if the dates are valid', () => {
