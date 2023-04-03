@@ -12,13 +12,13 @@
       <h2>Select your preferred time range</h2>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 d-flex justify-content-center">
         <app-date-picker (startDate)="setStartDate($event)"
                          (endDate)="setEndDate($event)">
         </app-date-picker>
       </div>
-      <div class="col-12 mt-3 ">
-        <button class="btn btn-primary" style="min-width: 300px" (click)="onSearch()">Show available cars</button>
+      <div class="col-12 mt-4 d-flex justify-content-center">
+        <button  type="submit" class="btn btn-primary" id="search-btn" data-testId="search-btn" style="min-width: 300px" (click)="onSearch()">Show available cars</button>
       </div>
     </div>
   </div>

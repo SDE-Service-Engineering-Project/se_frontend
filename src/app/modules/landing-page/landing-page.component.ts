@@ -26,6 +26,7 @@ export class LandingPageComponent {
       this.toastService.showDefaultErrorToast(
         'Please select a valid time range!'
       );
+      return;
     }
 
     this.router.navigate(['/catalog'], {
