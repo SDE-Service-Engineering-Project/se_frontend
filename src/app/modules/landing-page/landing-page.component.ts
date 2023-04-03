@@ -31,8 +31,8 @@ export class LandingPageComponent {
 
     this.router.navigate(['/catalog'], {
       queryParams: {
-        from: this.dateToString(this.startDate!!),
-        to: this.dateToString(this.endDate!!),
+        from: this.dateToString(this.startDate),
+        to: this.dateToString(this.endDate),
       },
     });
   }
