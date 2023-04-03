@@ -20,17 +20,14 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Card ID: {{ booking.carId }}</h5>
-        <hr />
+        <hr/>
 
         <p class="card-text mt-2">
-          {{ booking.createdOn | date : "longDate" }} -
+          {{ booking.bookedFrom | date : "longDate" }} -
           {{ booking.bookedUntil | date : "longDate" }}
         </p>
-        <!--        <p class="card-text"><span class="fw-bold">Booking days:</span> {{getTimeDuration() | number:'1.0-0'}}</p>-->
-        <p class="card-text">
-          <span class="fw-bold">Booking days:</span> {{ booking.daysToRent }}
-        </p>
-        <hr />
+        <p class="card-text"><span class="fw-bold">Booking days:</span> {{getTimeDuration() | number:'1.0-0'}}</p>
+        <hr/>
         <p class="card-text mt-0">
           <span class="fw-bold">Total amount:</span>
           {{ booking.price | currency : booking.currency }}

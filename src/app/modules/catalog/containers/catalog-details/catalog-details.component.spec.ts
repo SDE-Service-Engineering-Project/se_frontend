@@ -155,7 +155,9 @@ describe('CatalogDetailsComponent', () => {
       toastSpy = jest.spyOn(toastService, 'showDefaultErrorToast');
       component.startDate = null;
       getBookingBtn().click();
-      expect(toastSpy).toHaveBeenCalledWith('Ups something went wrong!');
+      expect(toastSpy).toHaveBeenCalledWith(
+        'Please select a valid time range!'
+      );
     });
 
     //TODO: fix date conversion difference between local and CI

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPageComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="container-fluid mt-4"
+  >
+    <div
+      class="d-flex flex-column align-items-center justify-content-center"
+    >
+      <div
+        class="row mb-4"
+      >
+        <h1>
+          Welcome to Car Booking Service
+        </h1>
+      </div>
+      <div
+        class="row"
+        style="min-width: 100%;"
+      >
+        <app-maps>
+          <google-map
+            height="300px"
+            width="100%"
+          />
+        </app-maps>
+      </div>
+      <div
+        class="row mb-4 mt-4"
+      >
+        <h2>
+          Select your preferred time range
+        </h2>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-12 d-flex justify-content-center"
+        >
+          <app-date-picker>
+            <form
+              class="row row-cols-sm-auto"
+            >
+              <div
+                class="col-12"
+              >
+                <label
+                  class="form-label"
+                  for="pick-up-date"
+                >
+                  Pick-up Date
+                </label>
+                <div
+                  class="dp-hidden position-absolute"
+                >
+                  <div
+                    class="input-group"
+                  >
+                    <input
+                      class="form-control"
+                      name="datepicker"
+                      ngbdatepicker=""
+                      outsidedays="hidden"
+                      tabindex="-1"
+                    />
+                    
+                    
+                  </div>
+                </div>
+                <div
+                  class="input-group"
+                >
+                  <input
+                    class="form-control"
+                    id="pick-up-date"
+                    name="dpFromDate"
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <button
+                    class="btn btn-outline-secondary bi bi-calendar3"
+                    data-testid="from-date-btn"
+                    type="button"
+                  />
+                </div>
+              </div>
+              <div
+                class="col-12"
+              >
+                <label
+                  class="form-label"
+                  for="return-date"
+                >
+                  Return Date
+                </label>
+                <div
+                  class="input-group"
+                >
+                  <input
+                    class="form-control"
+                    id="return-date"
+                    name="dpToDate"
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <button
+                    class="btn btn-outline-secondary bi bi-calendar3"
+                    data-testid="to-date-btn"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </form>
+          </app-date-picker>
+        </div>
+        <div
+          class="col-12 mt-4 d-flex justify-content-center"
+        >
+          <button
+            class="btn btn-primary"
+            data-testid="search-btn"
+            id="search-btn"
+            style="min-width: 300px;"
+            type="submit"
+          >
+            Show available cars
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

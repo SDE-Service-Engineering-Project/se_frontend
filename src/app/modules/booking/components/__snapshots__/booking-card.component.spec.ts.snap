@@ -38,7 +38,7 @@ exports[`BookingCardComponent should render the component 1`] = `
           <p
             class="card-text mt-2"
           >
-             February 14, 2020 - February 20, 2020 
+             February 20, 2020 - February 20, 2020 
           </p>
           <p
             class="card-text"
@@ -48,7 +48,7 @@ exports[`BookingCardComponent should render the component 1`] = `
             >
               Booking days:
             </span>
-             1 
+             0
           </p>
           <hr />
           <p
