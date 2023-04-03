@@ -3,11 +3,13 @@ import { NgbCalendar, NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { CarDataService } from '../../services/car-data.service';
 import { Car } from '../../../../models/car';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, of, Subscription, tap } from 'rxjs';
+import { catchError, Observable, of, Subscription, tap } from 'rxjs';
 import { ToastService } from '../../../../services/toast/toast.service';
 import { Booking } from '../../../../models/booking';
 import { BookingDataService } from '../../../../services/booking/booking-data.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { CurrencyService } from '../../../../services/currency/currency.service';
+import { CurrencyResponse } from '../../../../models/currency';
 
 @Component({
   selector: 'app-catalog-details',
@@ -16,7 +18,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class CatalogDetailsComponent implements OnInit, OnDestroy {
   car: Car = {} as Car;
-  reservationBtnDisabled = true;
+  price: number = 0;
+  currencies$: Observable<CurrencyResponse>;
   startDate: NgbDate | null;
   endDate: NgbDate | null;
   subscriptions: Subscription[] = [];
@@ -27,10 +30,12 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
     private calendar: NgbCalendar,
     private toastService: ToastService,
     private bookingService: BookingDataService,
-    private router: Router
+    private router: Router,
+    public currencyService: CurrencyService
   ) {
     this.startDate = calendar.getToday();
     this.endDate = calendar.getNext(calendar.getToday(), 'd', 10);
+    this.currencies$ = this.currencyService.fetchCurrencies();
   }
 
   ngOnInit() {
@@ -39,7 +44,8 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   setCarById(): void {
     this.subscriptions.push(
-      this.carService.fetchCarById(this.getCarId()).subscribe((car) => {
+      this.carService.fetchCarById(this.getCarId()).subscribe((car: Car) => {
+        this.price = car.price;
         this.car = car;
       })
     );
@@ -47,6 +53,34 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   getCarId(): number {
     return this.route.snapshot.params['carId'];
+  }
+
+  setCurrency(newCurrency: string): void {
+    this.currencyService.setOldCurrency(
+      this.currencyService.getCurrentCurrency()
+    );
+    this.currencyService.setCurrentCurrency(newCurrency);
+    this.setPrice(
+      this.price,
+      this.currencyService.getOldCurrency(),
+      newCurrency
+    );
+  }
+
+  setPrice(price: number, oldCurrency: string, newCurrency: string): void {
+    this.currencyService
+      .convertCurrency(price, oldCurrency, newCurrency)
+      .pipe(tap((curr) => (this.price = curr.amount)))
+      .subscribe();
+  }
+
+  getTotalPrice(originalCurrency?: boolean): number {
+    if (!this.startDate || !this.endDate) {
+      return 0;
+    }
+    return originalCurrency
+      ? (this.calcDuration(this.startDate!, this.endDate!) + 1) * this.car.price
+      : (this.calcDuration(this.startDate!, this.endDate!) + 1) * this.price;
   }
 
   bookCar(): void {
@@ -83,7 +117,7 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
       bookedUntil: this.convertNgbDateToDateString(this.endDate!),
       createdOn: new Date().toISOString(),
       currency: 'USD',
-      price: this.getTotalPrice(),
+      price: this.getTotalPrice(true),
       daysToRent: this.calcDuration(this.startDate!, this.endDate!),
     };
   }
@@ -98,15 +132,6 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   convertNgbDateToDateString(date: NgbDate): string {
     return new Date(date.year, date.month - 1, date.day).toISOString();
-  }
-
-  getTotalPrice(): number {
-    if (!this.startDate || !this.endDate) {
-      return 0;
-    }
-    return (
-      (this.calcDuration(this.startDate, this.endDate) + 1) * this.car.price
-    );
   }
 
   checkIfDatesAreValid(): boolean {

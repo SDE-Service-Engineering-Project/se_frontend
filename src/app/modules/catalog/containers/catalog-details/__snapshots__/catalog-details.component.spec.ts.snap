@@ -118,7 +118,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           <div
             class="col"
           >
-            EUR 100
+            100 USD
           </div>
         </div>
         <div
@@ -136,8 +136,30 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           </div>
           <div
             class="col"
+            style="display: flex;"
           >
-            EUR 1100
+            <div
+              style="margin-right: 4px;"
+            >
+               1100 
+            </div>
+            <div>
+              <div
+                class="nav-item"
+                ngbdropdown=""
+              >
+                <a
+                  class="nav-link"
+                  id="navbarDropdown1"
+                  ngbdropdowntoggle=""
+                  role="button"
+                  tabindex="0"
+                >
+                   USD 
+                </a>
+                
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -242,7 +264,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
             <p
               class="card-text details__row-2__car-properties"
             >
-               100 
+               100 USD 
             </p>
           </div>
         </div>
