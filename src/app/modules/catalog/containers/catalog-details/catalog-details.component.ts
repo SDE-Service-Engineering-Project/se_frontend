@@ -51,7 +51,9 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   bookCar(): void {
     if (!this.startDate || !this.endDate) {
-      this.toastService.showDefaultErrorToast('Ups something went wrong!');
+      this.toastService.showDefaultErrorToast(
+        'Please select a valid time range!'
+      );
       return;
     }
     const booking = this.buildBooking();

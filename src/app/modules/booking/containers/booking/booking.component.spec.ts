@@ -1,7 +1,5 @@
 import { ComponentFixture } from '@angular/core/testing';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
-import { Component } from '@angular/core';
-import { of } from 'rxjs';
 import {
   HttpClientTestingModule,
   HttpTestingController,
@@ -31,7 +29,7 @@ describe('BookingComponent', () => {
   });
 
   beforeEach(() => {
-    component.bookings$ = of(mockBookings);
+    component.bookings = mockBookings;
     spectator.detectChanges();
   });
 
