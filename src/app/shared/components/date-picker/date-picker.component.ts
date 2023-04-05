@@ -11,8 +11,10 @@ import {
   styleUrls: ['./date-picker.component.sass'],
 })
 export class DatePickerComponent {
-  @Output() startDate: EventEmitter<NgbDate> = new EventEmitter<NgbDate>();
-  @Output() endDate: EventEmitter<NgbDate> = new EventEmitter<NgbDate>();
+  @Output() startDate: EventEmitter<NgbDate | null> =
+    new EventEmitter<NgbDate | null>();
+  @Output() endDate: EventEmitter<NgbDate | null> =
+    new EventEmitter<NgbDate | null>();
   hoveredDate: NgbDate | null = null;
 
   fromDate: NgbDate | null;
@@ -29,8 +31,6 @@ export class DatePickerComponent {
   onDateSelection(date: NgbDate): void {
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
-      this.toDate = date;
-      this.endDate.emit(this.toDate);
       this.startDate.emit(this.fromDate);
     } else if (
       this.fromDate &&
@@ -44,6 +44,7 @@ export class DatePickerComponent {
       this.toDate = null;
       this.fromDate = date;
       this.startDate.emit(this.fromDate);
+      this.endDate.emit(this.toDate);
     }
   }
 

@@ -96,6 +96,13 @@ describe('LandingPageComponent', () => {
     expect(toastSpy).toHaveBeenCalledWith('Please select a valid time range!');
   });
 
+  it('should check if the dates are valid', () => {
+    component.startDate = null;
+    expect(component.checkIfDatesAreValid()).toEqual(false);
+    spectator.detectChanges();
+    expect(getSearchButton().disabled).toEqual(true);
+  });
+
   function getSearchButton(): HTMLButtonElement {
     return spectator.query(byTestId('search-btn')) as HTMLButtonElement;
   }

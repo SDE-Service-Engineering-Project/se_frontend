@@ -125,7 +125,7 @@ exports[`LandingPageComponent should render the component 1`] = `
             style="min-width: 300px;"
             type="submit"
           >
-            Show available cars
+             Show available cars 
           </button>
         </div>
       </div>

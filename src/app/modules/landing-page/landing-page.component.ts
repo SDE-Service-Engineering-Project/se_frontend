@@ -40,11 +40,15 @@ export class LandingPageComponent {
   private dateToString = (date: NgbDate) =>
     `${date.year}-${date.month}-${date.day}`;
 
-  setStartDate(date: NgbDate): void {
+  setStartDate(date: NgbDate | null): void {
     this.startDate = date;
   }
 
-  setEndDate(date: NgbDate): void {
+  setEndDate(date: NgbDate | null): void {
     this.endDate = date;
+  }
+
+  checkIfDatesAreValid(): boolean {
+    return !!this.startDate && !!this.endDate;
   }
 }

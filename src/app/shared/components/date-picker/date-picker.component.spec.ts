@@ -54,13 +54,12 @@ describe('DatePickerComponent', () => {
       fromEmitSpy = jest.spyOn(component.startDate, 'emit');
     });
 
-    it('should set fromDate and toDate to the date and emit them', () => {
+    it('should set the fromDate to the date and emit it if the fromDate and the toDate are null', () => {
       component.fromDate = null;
       component.toDate = null;
       component.onDateSelection(date);
       expect(component.fromDate).toEqual(date);
-      expect(component.toDate).toEqual(date);
-      expect(toEmitSpy).toHaveBeenCalledWith(date);
+      expect(component.toDate).toEqual(null);
       expect(fromEmitSpy).toHaveBeenCalledWith(date);
     });
 

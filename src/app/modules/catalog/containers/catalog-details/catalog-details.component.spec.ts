@@ -191,12 +191,12 @@ describe('CatalogDetailsComponent', () => {
       );
     });
 
-    //TODO: fix date conversion difference between local and CI
-    // it('should convert NgbDate to a string', () => {
-    //   expect(
-    //     component.convertNgbDateToDateString(new NgbDate(2021, 1, 1))
-    //   ).toEqual('2020-12-31T23:00:00.000Z');
-    // });
+    it('should check if the dates are valid', () => {
+      component.startDate = null;
+      expect(component.checkIfDatesAreValid()).toEqual(false);
+      spectator.detectChanges();
+      expect(getBookingBtn().disabled).toEqual(true);
+    });
 
     it('should book a car', () => {
       toastSpy = jest.spyOn(toastService, 'showDefaultSuccessToast');
