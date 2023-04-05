@@ -122,11 +122,11 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
     };
   }
 
-  setStartDate(date: NgbDate): void {
+  setStartDate(date: NgbDate | null): void {
     this.startDate = date;
   }
 
-  setEndDate(date: NgbDate): void {
+  setEndDate(date: NgbDate | null): void {
     this.endDate = date;
   }
 
