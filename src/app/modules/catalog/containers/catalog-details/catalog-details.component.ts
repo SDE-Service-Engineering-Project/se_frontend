@@ -119,6 +119,7 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
       currency: 'USD',
       price: this.getTotalPrice(true),
       daysToRent: this.calcDuration(this.startDate!, this.endDate!),
+      car: this.car,
     };
   }
 

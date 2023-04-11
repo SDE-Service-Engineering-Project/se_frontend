@@ -1,5 +1,5 @@
 import { Booking } from '../../../models/booking';
-import { carMock1 } from './car.mock';
+import { carMock1, carMock2 } from './car.mock';
 
 export const mockBooking: Booking = {
   daysToRent: 1,
@@ -12,6 +12,7 @@ export const mockBooking: Booking = {
   currency: 'USD',
   price: 12345,
   userId: 1,
+  car: carMock2,
 };
 
 export const mockBooking2: Booking = {
@@ -25,6 +26,7 @@ export const mockBooking2: Booking = {
   currency: 'USD',
   price: 12345,
   userId: 1,
+  car: carMock1,
 };
 
 export const mockBookings: Booking[] = [
