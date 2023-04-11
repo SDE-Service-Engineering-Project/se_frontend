@@ -32,7 +32,7 @@ exports[`BookingCardComponent should render the component 1`] = `
           <h5
             class="card-title"
           >
-            Card ID: 1
+            Vehicle: Opel Kadett
           </h5>
           <hr />
           <p

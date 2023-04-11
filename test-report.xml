@@ -1,150 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/storage/storage.service.spec.ts">
-    <testCase name="StorageService should be created" duration="10"/>
-    <testCase name="StorageService should save auth response to session storage" duration="2"/>
-    <testCase name="StorageService should retrieve authentication when present" duration="1"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/booking/components/booking-card.component.spec.ts">
+    <testCase name="BookingCardComponent should render the component" duration="82"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/not-found/not-found.component.spec.ts">
-    <testCase name="NotFoundComponent should create" duration="32"/>
-    <testCase name="NotFoundComponent should render the component" duration="9"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/booking/containers/booking/booking.component.spec.ts">
+    <testCase name="BookingComponent should render the component" duration="135"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/booking/bookingdata.service.spec.ts">
-    <testCase name="BookingDataService should fetch all cars" duration="7"/>
-    <testCase name="BookingDataService should create a booking" duration="2"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/catalog/containers/catalog-details/catalog-details.component.spec.ts">
+    <testCase name="CatalogDetailsComponent should render the component" duration="110"/>
+    <testCase name="CatalogDetailsComponent should get the carId" duration="28"/>
+    <testCase name="CatalogDetailsComponent should set the car" duration="23"/>
+    <testCase name="CatalogDetailsComponent should set the start date" duration="26"/>
+    <testCase name="CatalogDetailsComponent should set the end date" duration="25"/>
+    <testCase name="CatalogDetailsComponent should return 0 if the start date or the end date are not set" duration="19"/>
+    <testCase name="CatalogDetailsComponent should return the total price in USD if the currency is set to original" duration="20"/>
+    <testCase name="CatalogDetailsComponent should return the total price " duration="19"/>
+    <testCase name="CatalogDetailsComponent should set the currency" duration="23"/>
+    <testCase name="CatalogDetailsComponent should set the price according to the currency" duration="22"/>
+    <testCase name="CatalogDetailsComponent should check if the dates are valid" duration="17"/>
+    <testCase name="CatalogDetailsComponent should convert NgbDate to Date" duration="17"/>
+    <testCase name="CatalogDetailsComponent should calculate the difference between two dates" duration="18"/>
+    <testCase name="CatalogDetailsComponent bookCar should show a error toast if the dates are not valid" duration="21"/>
+    <testCase name="CatalogDetailsComponent bookCar should check if the dates are valid" duration="22"/>
+    <testCase name="CatalogDetailsComponent bookCar should book a car" duration="35"/>
+    <testCase name="CatalogDetailsComponent bookCar should show a error toast if the booking fails" duration="18"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/catalog/services/car-data.service.spec.ts">
-    <testCase name="CarDataService should fetch all cars" duration="10"/>
-    <testCase name="CarDataService should fetch a car by its id" duration="3"/>
-    <testCase name="CarDataService should fetch car within time range" duration="2"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/landing-page/landing-page.component.spec.ts">
+    <testCase name="LandingPageComponent should render the component" duration="125"/>
+    <testCase name="LandingPageComponent should create" duration="43"/>
+    <testCase name="LandingPageComponent should route to catalog with queryParams" duration="52"/>
+    <testCase name="LandingPageComponent should not route to catalog when date range is invalid" duration="30"/>
+    <testCase name="LandingPageComponent should check if the dates are valid" duration="35"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/toast/toast.service.spec.ts">
-    <testCase name="ToastService should push a toast to the toasts array" duration="6"/>
-    <testCase name="ToastService should remove a toast from array" duration="2"/>
-    <testCase name="ToastService should remove all toasts from array" duration="1"/>
-    <testCase name="ToastService should show a success toast" duration="1"/>
-    <testCase name="ToastService should show an error toast" duration="1"/>
-    <testCase name="ToastService should show an error toast with default message" duration="1"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/header/header.component.spec.ts">
+    <testCase name="HeaderComponent should render the component" duration="81"/>
+    <testCase name="HeaderComponent should navigate to the correct routes" duration="46"/>
+    <testCase name="HeaderComponent should log the user out" duration="20"/>
+    <testCase name="HeaderComponent should change the collapsed property of the navbar" duration="55"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/currency/currency.service.spec.ts">
-    <testCase name="CurrencyService should fetch all currencies" duration="11"/>
-    <testCase name="CurrencyService should convert currency" duration="3"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/date-picker/date-picker.component.spec.ts">
+    <testCase name="DatePickerComponent should render the component" duration="68"/>
+    <testCase name="DatePickerComponent onDateSelection should set the fromDate to the date and emit it if the fromDate and the toDate are null" duration="20"/>
+    <testCase name="DatePickerComponent onDateSelection should set the toDate to the date and emit the endDate" duration="15"/>
+    <testCase name="DatePickerComponent onDateSelection should set the fromDate to the date and emit the startDate" duration="20"/>
+    <testCase name="DatePickerComponent date picker properties should set isInside to true if the toDate is defined and is inside the possible range" duration="12"/>
+    <testCase name="DatePickerComponent date picker properties should set isHovered to false if the date is after the fromDate" duration="11"/>
+    <testCase name="DatePickerComponent date picker properties should set isHovered to true if fromDate is defined, toDate is false, hoverDate is defined, the date is after fromDate and before hoverDate" duration="11"/>
+    <testCase name="DatePickerComponent date picker properties should set isRange to true if the date is equal to fromDate" duration="11"/>
+    <testCase name="DatePickerComponent date picker properties should set isRange to false if all conditions are not met" duration="14"/>
+    <testCase name="DatePickerComponent date picker properties should set isRange to true if the date is equal to toDate" duration="15"/>
+    <testCase name="DatePickerComponent date picker properties should set isInside to false if the toDate is defined but is outside the possible range" duration="13"/>
+    <testCase name="DatePickerComponent date picker properties should validate and parse the date and return the input as a NgbDate" duration="12"/>
+    <testCase name="DatePickerComponent date picker properties should validate and parse the date and return the currentValue" duration="13"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/booking/components/booking-card.component.spec.ts">
-    <testCase name="BookingCardComponent should render the component" duration="42"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/login/login.component.spec.ts">
+    <testCase name="LoginComponent should render the component" duration="105"/>
+    <testCase name="LoginComponent should display login button" duration="34"/>
+    <testCase name="LoginComponent should enable login button when username and password is set" duration="24"/>
+    <testCase name="LoginComponent should not enable login button when only username is set" duration="23"/>
+    <testCase name="LoginComponent form is invalid should return invalid login form if username is empty" duration="21"/>
+    <testCase name="LoginComponent form is invalid should return invalid login form if password is not set" duration="19"/>
+    <testCase name="LoginComponent form is invalid should not call login method when login button is clicked" duration="18"/>
+    <testCase name="LoginComponent form is valid should return valid login form if username is set" duration="21"/>
+    <testCase name="LoginComponent form is valid should return valid login form if password is set" duration="22"/>
+    <testCase name="LoginComponent form is valid should call login method when login button is clicked" duration="24"/>
+    <testCase name="LoginComponent form is valid should call the remove all method from the toast service in submit login" duration="20"/>
+    <testCase name="LoginComponent form is valid should save the token in the storage service" duration="35"/>
+    <testCase name="LoginComponent form is valid should navigate to the home page and show a success toast" duration="23"/>
+    <testCase name="LoginComponent form is valid should show a toast with the error message" duration="20"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/catalog/components/car-card/car-card.component.spec.ts">
-    <testCase name="CarCardComponent should render the component" duration="35"/>
-    <testCase name="CarCardComponent should emit the car when select car is called" duration="12"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/toast/toast.component.spec.ts">
+    <testCase name="ToastComponent should render the component" duration="39"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/maps/maps.component.spec.ts">
-    <testCase name="MapsComponent should create" duration="50"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/register/register.component.spec.ts">
+    <testCase name="RegisterComponent should render the component" duration="113"/>
+    <testCase name="RegisterComponent form is not valid should not submit register" duration="30"/>
+    <testCase name="RegisterComponent form is valid should enable register button when all fields are correctly set" duration="24"/>
+    <testCase name="RegisterComponent form is valid should submit register" duration="25"/>
+    <testCase name="RegisterComponent form is valid should call the remove all method from the toast service" duration="26"/>
+    <testCase name="RegisterComponent form is valid should navigate to the login page and show a success toast" duration="38"/>
+    <testCase name="RegisterComponent form is valid should show a toast with the error message" duration="23"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/guards/auth.guard.spec.ts">
-    <testCase name="AuthGuard user not signed in should redirect to login" duration="33"/>
-    <testCase name="AuthGuard user signed in should redirect to login" duration="4"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/booking/bookingdata.service.spec.ts">
+    <testCase name="BookingDataService should fetch all cars" duration="16"/>
+    <testCase name="BookingDataService should create a booking" duration="4"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render the app" duration="27"/>
-    <testCase name="AppComponent should display login page" duration="9"/>
-    <testCase name="AppComponent isLoggedIn should return false if no token" duration="7"/>
-    <testCase name="AppComponent isLoggedIn should return true if token" duration="11"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/guards/login.guard.spec.ts">
+    <testCase name="LoginGuard user not signed in should redirect to login" duration="41"/>
+    <testCase name="LoginGuard user signed in should redirect to home page" duration="23"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/guards/login.guard.spec.ts">
-    <testCase name="LoginGuard user not signed in should redirect to login" duration="14"/>
-    <testCase name="LoginGuard user signed in should redirect to home page" duration="8"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/app.component.spec.ts">
+    <testCase name="AppComponent should render the app" duration="79"/>
+    <testCase name="AppComponent should display login page" duration="20"/>
+    <testCase name="AppComponent isLoggedIn should return false if no token" duration="17"/>
+    <testCase name="AppComponent isLoggedIn should return true if token" duration="16"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/interceptor/http.interceptor.spec.ts">
-    <testCase name="HttpInterceptor should be created" duration="7"/>
-    <testCase name="HttpInterceptor should add content type to request" duration="3"/>
-    <testCase name="HttpInterceptor should add access token to request if present" duration="2"/>
-    <testCase name="HttpInterceptor should refresh token if initial request responded with 401" duration="2"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/catalog/containers/catalog/catalog.component.spec.ts">
+    <testCase name="CatalogComponent should render the component" duration="129"/>
+    <testCase name="CatalogComponent should navigate to the catalog details page when a car selection is emitted" duration="40"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/toast/toast.component.spec.ts">
-    <testCase name="ToastComponent should render the component" duration="15"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/maps/maps.component.spec.ts">
+    <testCase name="MapsComponent should create" duration="73"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/services/http/auth.service.spec.ts">
-    <testCase name="AuthService should send an auth request to the backend" duration="12"/>
-    <testCase name="AuthService should send register request to backend" duration="3"/>
-    <testCase name="AuthService should refresh access token with refresh token" duration="2"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/catalog/components/car-card/car-card.component.spec.ts">
+    <testCase name="CarCardComponent should render the component" duration="48"/>
+    <testCase name="CarCardComponent should emit the car when select car is called" duration="13"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/header/header.component.spec.ts">
-    <testCase name="HeaderComponent should render the component" duration="54"/>
-    <testCase name="HeaderComponent should navigate to the correct routes" duration="32"/>
-    <testCase name="HeaderComponent should log the user out" duration="13"/>
-    <testCase name="HeaderComponent should change the collapsed property of the navbar" duration="18"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/guards/auth.guard.spec.ts">
+    <testCase name="AuthGuard user not signed in should redirect to login" duration="63"/>
+    <testCase name="AuthGuard user signed in should redirect to login" duration="5"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/shared/components/date-picker/date-picker.component.spec.ts">
-    <testCase name="DatePickerComponent should render the component" duration="26"/>
-    <testCase name="DatePickerComponent onDateSelection should set the fromDate to the date and emit it if the fromDate and the toDate are null" duration="10"/>
-    <testCase name="DatePickerComponent onDateSelection should set the toDate to the date and emit the endDate" duration="7"/>
-    <testCase name="DatePickerComponent onDateSelection should set the fromDate to the date and emit the startDate" duration="6"/>
-    <testCase name="DatePickerComponent date picker properties should set isInside to true if the toDate is defined and is inside the possible range" duration="6"/>
-    <testCase name="DatePickerComponent date picker properties should set isHovered to false if the date is after the fromDate" duration="5"/>
-    <testCase name="DatePickerComponent date picker properties should set isHovered to true if fromDate is defined, toDate is false, hoverDate is defined, the date is after fromDate and before hoverDate" duration="4"/>
-    <testCase name="DatePickerComponent date picker properties should set isRange to true if the date is equal to fromDate" duration="5"/>
-    <testCase name="DatePickerComponent date picker properties should set isRange to false if all conditions are not met" duration="6"/>
-    <testCase name="DatePickerComponent date picker properties should set isRange to true if the date is equal to toDate" duration="5"/>
-    <testCase name="DatePickerComponent date picker properties should set isInside to false if the toDate is defined but is outside the possible range" duration="7"/>
-    <testCase name="DatePickerComponent date picker properties should validate and parse the date and return the input as a NgbDate" duration="8"/>
-    <testCase name="DatePickerComponent date picker properties should validate and parse the date and return the currentValue" duration="7"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/interceptor/http.interceptor.spec.ts">
+    <testCase name="HttpInterceptor should be created" duration="21"/>
+    <testCase name="HttpInterceptor should add content type to request" duration="9"/>
+    <testCase name="HttpInterceptor should add access token to request if present" duration="4"/>
+    <testCase name="HttpInterceptor should refresh token if initial request responded with 401" duration="5"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/catalog/containers/catalog/catalog.component.spec.ts">
-    <testCase name="CatalogComponent should render the component" duration="78"/>
-    <testCase name="CatalogComponent should navigate to the catalog details page when a car selection is emitted" duration="16"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/toast/toast.service.spec.ts">
+    <testCase name="ToastService should push a toast to the toasts array" duration="21"/>
+    <testCase name="ToastService should remove a toast from array" duration="4"/>
+    <testCase name="ToastService should remove all toasts from array" duration="3"/>
+    <testCase name="ToastService should show a success toast" duration="2"/>
+    <testCase name="ToastService should show an error toast" duration="3"/>
+    <testCase name="ToastService should show an error toast with default message" duration="2"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/login/login.component.spec.ts">
-    <testCase name="LoginComponent should render the component" duration="37"/>
-    <testCase name="LoginComponent should display login button" duration="11"/>
-    <testCase name="LoginComponent should enable login button when username and password is set" duration="9"/>
-    <testCase name="LoginComponent should not enable login button when only username is set" duration="8"/>
-    <testCase name="LoginComponent form is invalid should return invalid login form if username is empty" duration="6"/>
-    <testCase name="LoginComponent form is invalid should return invalid login form if password is not set" duration="7"/>
-    <testCase name="LoginComponent form is invalid should not call login method when login button is clicked" duration="7"/>
-    <testCase name="LoginComponent form is valid should return valid login form if username is set" duration="6"/>
-    <testCase name="LoginComponent form is valid should return valid login form if password is set" duration="7"/>
-    <testCase name="LoginComponent form is valid should call login method when login button is clicked" duration="8"/>
-    <testCase name="LoginComponent form is valid should call the remove all method from the toast service in submit login" duration="8"/>
-    <testCase name="LoginComponent form is valid should save the token in the storage service" duration="11"/>
-    <testCase name="LoginComponent form is valid should navigate to the home page and show a success toast" duration="7"/>
-    <testCase name="LoginComponent form is valid should show a toast with the error message" duration="7"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/currency/currency.service.spec.ts">
+    <testCase name="CurrencyService should fetch all currencies" duration="25"/>
+    <testCase name="CurrencyService should convert currency" duration="4"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/booking/containers/booking/booking.component.spec.ts">
-    <testCase name="BookingComponent should render the component" duration="47"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/http/auth.service.spec.ts">
+    <testCase name="AuthService should send an auth request to the backend" duration="20"/>
+    <testCase name="AuthService should send register request to backend" duration="4"/>
+    <testCase name="AuthService should refresh access token with refresh token" duration="4"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/register/register.component.spec.ts">
-    <testCase name="RegisterComponent should render the component" duration="41"/>
-    <testCase name="RegisterComponent form is not valid should not submit register" duration="13"/>
-    <testCase name="RegisterComponent form is valid should enable register button when all fields are correctly set" duration="9"/>
-    <testCase name="RegisterComponent form is valid should submit register" duration="10"/>
-    <testCase name="RegisterComponent form is valid should call the remove all method from the toast service" duration="8"/>
-    <testCase name="RegisterComponent form is valid should navigate to the login page and show a success toast" duration="16"/>
-    <testCase name="RegisterComponent form is valid should show a toast with the error message" duration="9"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/modules/catalog/services/car-data.service.spec.ts">
+    <testCase name="CarDataService should fetch all cars" duration="22"/>
+    <testCase name="CarDataService should fetch a car by its id" duration="6"/>
+    <testCase name="CarDataService should fetch car within time range" duration="6"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/landing-page/landing-page.component.spec.ts">
-    <testCase name="LandingPageComponent should render the component" duration="42"/>
-    <testCase name="LandingPageComponent should create" duration="17"/>
-    <testCase name="LandingPageComponent should route to catalog with queryParams" duration="19"/>
-    <testCase name="LandingPageComponent should not route to catalog when date range is invalid" duration="17"/>
-    <testCase name="LandingPageComponent should check if the dates are valid" duration="13"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/shared/components/not-found/not-found.component.spec.ts">
+    <testCase name="NotFoundComponent should create" duration="66"/>
+    <testCase name="NotFoundComponent should render the component" duration="18"/>
   </file>
-  <file path="/home/msk/Projects/school/SDE-service-engineering/se_frontend/src/app/modules/catalog/containers/catalog-details/catalog-details.component.spec.ts">
-    <testCase name="CatalogDetailsComponent should render the component" duration="76"/>
-    <testCase name="CatalogDetailsComponent should get the carId" duration="18"/>
-    <testCase name="CatalogDetailsComponent should set the car" duration="13"/>
-    <testCase name="CatalogDetailsComponent should set the start date" duration="17"/>
-    <testCase name="CatalogDetailsComponent should set the end date" duration="16"/>
-    <testCase name="CatalogDetailsComponent should return 0 if the start date or the end date are not set" duration="13"/>
-    <testCase name="CatalogDetailsComponent should return the total price in USD if the currency is set to original" duration="12"/>
-    <testCase name="CatalogDetailsComponent should return the total price " duration="10"/>
-    <testCase name="CatalogDetailsComponent should set the currency" duration="7"/>
-    <testCase name="CatalogDetailsComponent should set the price according to the currency" duration="8"/>
-    <testCase name="CatalogDetailsComponent should check if the dates are valid" duration="7"/>
-    <testCase name="CatalogDetailsComponent should convert NgbDate to Date" duration="8"/>
-    <testCase name="CatalogDetailsComponent should calculate the difference between two dates" duration="6"/>
-    <testCase name="CatalogDetailsComponent bookCar should show a error toast if the dates are not valid" duration="7"/>
-    <testCase name="CatalogDetailsComponent bookCar should check if the dates are valid" duration="6"/>
-    <testCase name="CatalogDetailsComponent bookCar should book a car" duration="12"/>
-    <testCase name="CatalogDetailsComponent bookCar should show a error toast if the booking fails" duration="7"/>
+  <file path="/home/thomas/Documents/Projects/se/se_frontend/src/app/services/storage/storage.service.spec.ts">
+    <testCase name="StorageService should be created" duration="16"/>
+    <testCase name="StorageService should save auth response to session storage" duration="4"/>
+    <testCase name="StorageService should retrieve authentication when present" duration="4"/>
   </file>
 </testExecutions>

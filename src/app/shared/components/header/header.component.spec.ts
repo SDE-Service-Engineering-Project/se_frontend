@@ -31,10 +31,6 @@ describe('HeaderComponent', () => {
           component: RoutedTestComponent,
         },
         {
-          path: 'maps',
-          component: RoutedTestComponent,
-        },
-        {
           path: 'catalog',
           component: RoutedTestComponent,
         },
@@ -60,9 +56,6 @@ describe('HeaderComponent', () => {
     spectator.click(getNavigationItem('bookings'));
     spectator.detectChanges();
     expect(spectator.inject(Location).path()).toBe('/bookings');
-    spectator.click(getNavigationItem('maps'));
-    spectator.detectChanges();
-    expect(spectator.inject(Location).path()).toBe('/maps');
     spectator.click(getNavigationItem('catalog'));
     spectator.detectChanges();
     expect(spectator.inject(Location).path()).toBe('/catalog');

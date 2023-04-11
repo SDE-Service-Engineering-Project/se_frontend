@@ -20,11 +20,6 @@ export class HeaderComponent {
       path: '/bookings',
       testId: 'nav-item-bookings',
     },
-    {
-      title: 'Find a Location',
-      path: '/maps',
-      testId: 'nav-item-maps',
-    },
   ];
 
   constructor(private storageService: StorageService, private router: Router) {}
