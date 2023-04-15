@@ -7,9 +7,9 @@ import { catchError, Observable, of, Subscription, tap } from 'rxjs';
 import { ToastService } from '../../../../services/toast/toast.service';
 import { Booking } from '../../../../models/booking';
 import { BookingDataService } from '../../../../services/booking/booking-data.service';
-import { HttpErrorResponse } from '@angular/common/http';
 import { CurrencyService } from '../../../../services/currency/currency.service';
 import { CurrencyResponse } from '../../../../models/currency';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-catalog-details',
@@ -102,7 +102,7 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
             this.router.navigate(['/bookings']);
           }),
           catchError((err: HttpErrorResponse) => {
-            this.toastService.showDefaultErrorToast(err.error.message);
+            this.toastService.showDefaultErrorToast(err?.error.message);
             return of(err);
           })
         )
@@ -113,8 +113,8 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
   buildBooking(): Booking {
     return {
       carId: this.getCarId(),
-      bookedFrom: this.convertNgbDateToDateString(this.startDate!),
-      bookedUntil: this.convertNgbDateToDateString(this.endDate!),
+      bookedFrom: this.createDateFromNgbDate(this.startDate!).toISOString(),
+      bookedUntil: this.createDateFromNgbDate(this.endDate!).toISOString(),
       createdOn: new Date().toISOString(),
       currency: 'USD',
       price: this.getTotalPrice(true),
@@ -129,10 +129,6 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   setEndDate(date: NgbDate | null): void {
     this.endDate = date;
-  }
-
-  convertNgbDateToDateString(date: NgbDate): string {
-    return new Date(date.year, date.month - 1, date.day).toISOString();
   }
 
   checkIfDatesAreValid(): boolean {
