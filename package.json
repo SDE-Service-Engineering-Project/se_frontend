@@ -10,7 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "test:workers": "jest --maxWorkers=10%"
+    "test:workers": "jest --maxWorkers=50%"
   },
   "private": true,
   "dependencies": {

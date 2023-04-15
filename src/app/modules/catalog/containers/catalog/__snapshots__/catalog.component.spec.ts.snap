@@ -29,7 +29,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="VW Golf"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -42,7 +42,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Golf
+                Brand: VW
               </p>
               <p
                 class="card-text"
@@ -60,7 +60,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 100 / EUR
+                 €100.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -85,7 +85,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Opel Kadett"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -98,7 +98,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Kadett
+                Brand: Opel
               </p>
               <p
                 class="card-text"
@@ -116,7 +116,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 200 / EUR
+                 €200.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -141,7 +141,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Mercedes A-Class"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -154,7 +154,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: A-Class
+                Brand: Mercedes
               </p>
               <p
                 class="card-text"
@@ -172,7 +172,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 300 / EUR
+                 €300.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -197,7 +197,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="VW Golf"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -210,7 +210,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Golf
+                Brand: VW
               </p>
               <p
                 class="card-text"
@@ -228,7 +228,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 100 / EUR
+                 €100.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -253,7 +253,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Opel Kadett"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -266,7 +266,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Kadett
+                Brand: Opel
               </p>
               <p
                 class="card-text"
@@ -284,7 +284,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 200 / EUR
+                 €200.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -309,7 +309,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Mercedes A-Class"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -322,7 +322,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: A-Class
+                Brand: Mercedes
               </p>
               <p
                 class="card-text"
@@ -340,7 +340,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 300 / EUR
+                 €300.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -365,7 +365,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="VW Golf"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -378,7 +378,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Golf
+                Brand: VW
               </p>
               <p
                 class="card-text"
@@ -396,7 +396,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 100 / EUR
+                 €100.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -421,7 +421,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Opel Kadett"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -434,7 +434,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Kadett
+                Brand: Opel
               </p>
               <p
                 class="card-text"
@@ -452,7 +452,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 200 / EUR
+                 €200.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -477,7 +477,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Mercedes A-Class"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -490,7 +490,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: A-Class
+                Brand: Mercedes
               </p>
               <p
                 class="card-text"
@@ -508,7 +508,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 300 / EUR
+                 €300.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -533,7 +533,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="VW Golf"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -546,7 +546,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Golf
+                Brand: VW
               </p>
               <p
                 class="card-text"
@@ -564,7 +564,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 100 / EUR
+                 €100.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -589,7 +589,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Opel Kadett"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -602,7 +602,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: Kadett
+                Brand: Opel
               </p>
               <p
                 class="card-text"
@@ -620,7 +620,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 200 / EUR
+                 €200.00 / Day
               </p>
               <button
                 class="btn btn-primary"
@@ -645,7 +645,7 @@ exports[`CatalogComponent should render the component 1`] = `
             <img
               alt="Mercedes A-Class"
               class="card-img-top"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+              src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
             />
             <div
               class="card-body"
@@ -658,7 +658,7 @@ exports[`CatalogComponent should render the component 1`] = `
               <p
                 class="card-text"
               >
-                Brand: A-Class
+                Brand: Mercedes
               </p>
               <p
                 class="card-text"
@@ -676,7 +676,7 @@ exports[`CatalogComponent should render the component 1`] = `
                 <b>
                   Price:
                 </b>
-                 300 / EUR
+                 €300.00 / Day
               </p>
               <button
                 class="btn btn-primary"
