@@ -51,7 +51,7 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
     );
   }
 
-  getCarId(): number {
+  getCarId(): string {
     return this.route.snapshot.params['carId'];
   }
 
@@ -79,8 +79,8 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
       return 0;
     }
     return originalCurrency
-      ? (this.calcDuration(this.startDate!, this.endDate!) + 1) * this.car.price
-      : (this.calcDuration(this.startDate!, this.endDate!) + 1) * this.price;
+      ? (this.calcDuration(this.startDate, this.endDate) + 1) * this.car.price
+      : (this.calcDuration(this.startDate, this.endDate) + 1) * this.price;
   }
 
   bookCar(): void {

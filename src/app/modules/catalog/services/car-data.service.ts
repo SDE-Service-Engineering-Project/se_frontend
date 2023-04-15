@@ -22,7 +22,7 @@ export class CarDataService {
     );
   }
 
-  fetchCarById(carId: number): Observable<Car> {
+  fetchCarById(carId: string): Observable<Car> {
     return this.http.get<Car>(CAR_API + carId);
   }
 }
