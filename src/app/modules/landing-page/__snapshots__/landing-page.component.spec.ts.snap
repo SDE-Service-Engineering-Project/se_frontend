@@ -25,7 +25,69 @@ exports[`LandingPageComponent should render the component 1`] = `
           <google-map
             height="300px"
             width="100%"
-          />
+          >
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            <map-marker />
+            
+            
+          </google-map>
         </app-maps>
       </div>
       <div

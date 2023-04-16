@@ -3,4 +3,7 @@
   width="100%"
   [options]="options"
   [center]="center">
+  <map-marker *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              [options]="markerOptions"></map-marker>
 </google-map>
