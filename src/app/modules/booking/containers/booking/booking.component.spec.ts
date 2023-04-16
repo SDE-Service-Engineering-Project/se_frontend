@@ -1,4 +1,4 @@
-import { ComponentFixture } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import {
   HttpClientTestingModule,
@@ -68,15 +68,20 @@ describe('BookingComponent', () => {
     ]);
   });
 
-  it('should cancel the booking', () => {
-    bookingSpy = jest.spyOn(bookingDataService, 'cancelBooking');
+  it('should cancel the booking', fakeAsync(() => {
+    bookingSpy = jest
+      .spyOn(bookingDataService, 'cancelBooking')
+      .mockReturnValue(of(''));
+    const fetchSpy = jest.spyOn(bookingDataService, 'fetchBookings');
     toastSpy = jest.spyOn(toastService, 'showDefaultSuccessToast');
     getBookingCardComponent().bookingCanceled.emit(mockBooking3);
     expect(bookingSpy).toHaveBeenCalledWith(mockBooking3);
+    tick(10000);
     expect(toastSpy).toHaveBeenCalledWith(
       'Your Booking was successfully canceled'
     );
-  });
+    expect(fetchSpy).toHaveBeenCalled();
+  }));
 
   it('should display an error toast if the cancellation was not successfull', () => {
     bookingSpy = jest

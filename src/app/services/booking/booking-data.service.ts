@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Booking } from '../../models/booking';
 import { environment } from '../../../environments/environment';
@@ -21,6 +21,6 @@ export class BookingDataService {
   }
 
   cancelBooking(booking: Booking): Observable<any> {
-    return of(['Booking was canceled']);
+    return this.http.patch(BOOKING_API + booking.bookingId, '');
   }
 }
