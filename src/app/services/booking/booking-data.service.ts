@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Booking } from '../../models/booking';
 import { environment } from '../../../environments/environment';
 
@@ -18,5 +18,9 @@ export class BookingDataService {
 
   createBooking(booking: Booking): Observable<Booking> {
     return this.http.post<Booking>(BOOKING_API, booking);
+  }
+
+  cancelBooking(booking: Booking): Observable<any> {
+    return of(['Booking was canceled']);
   }
 }

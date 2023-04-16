@@ -31,4 +31,16 @@ export class BookingComponent {
   public filterBookings(type: string): Booking[] {
     return this.bookings?.filter((x) => x.bookingStatus === type);
   }
+
+  //TODO: adapt to real response!
+  cancelBooking(booking: Booking) {
+    this.bookingDataService.cancelBooking(booking).subscribe({
+      next: (response) => {
+        this.toastService.showDefaultSuccessToast(
+          'Your Booking was successfully canceled'
+        );
+      },
+      error: (err) => this.toastService.showDefaultErrorToast(err),
+    });
+  }
 }

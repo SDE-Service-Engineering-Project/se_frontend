@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { BookingDataService } from './booking-data.service';
 import {
   mockBooking,
+  mockBooking3,
   mockBookings,
 } from '../../utils/testing/mocks/booking.mock';
 
@@ -37,4 +38,5 @@ describe('BookingDataService', () => {
       expect(booking).toBe(mockBooking);
     });
   });
+  it.todo('should cancel a booking');
 });
