@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Booking } from '../../../../models/booking';
 import { BookingDataService } from '../../../../services/booking/booking-data.service';
 import { ToastService } from '../../../../services/toast/toast.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-booking',
@@ -9,13 +10,17 @@ import { ToastService } from '../../../../services/toast/toast.service';
   styleUrls: ['./booking.component.sass'],
 })
 export class BookingComponent {
-  bookings: Booking[];
+  bookings: Booking[] = [];
 
   constructor(
     private bookingDataService: BookingDataService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private cdr: ChangeDetectorRef
   ) {
-    this.bookings = [];
+    this.setBookings();
+  }
+
+  setBookings() {
     this.bookingDataService.fetchBookings().subscribe({
       next: (data) => {
         this.bookings = data;
@@ -30,5 +35,17 @@ export class BookingComponent {
 
   public filterBookings(type: string): Booking[] {
     return this.bookings?.filter((x) => x.bookingStatus === type);
+  }
+
+  cancelBooking(booking: Booking) {
+    this.bookingDataService.cancelBooking(booking).subscribe({
+      next: () => {
+        this.toastService.showDefaultSuccessToast(
+          'Your Booking was successfully canceled'
+        );
+        this.setBookings();
+      },
+      error: (err) => this.toastService.showDefaultErrorToast(err),
+    });
   }
 }
