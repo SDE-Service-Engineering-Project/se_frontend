@@ -118,7 +118,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           <div
             class="col"
           >
-            100 USD
+            100.00 USD
           </div>
         </div>
         <div
@@ -141,7 +141,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
             <div
               style="margin-right: 4px;"
             >
-               1100 
+               1100.00 
             </div>
             <div>
               <div
@@ -264,7 +264,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
             <p
               class="card-text details__row-2__car-properties"
             >
-               100 USD 
+               100.00 USD 
             </p>
           </div>
         </div>

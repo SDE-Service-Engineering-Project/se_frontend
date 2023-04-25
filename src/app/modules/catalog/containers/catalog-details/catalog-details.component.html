@@ -19,7 +19,7 @@
       </div>
       <div class="row details__row-1__day-price">
         <div class="col">Total Per Day:</div>
-        <div class="col">{{ price }} {{ currencyService.getCurrentCurrency() }}</div>
+        <div class="col">{{ price.toFixed(2) }} {{ currencyService.getCurrentCurrency() }}</div>
       </div>
       <div class="row details__row-1__separator">
         <hr />
@@ -28,7 +28,7 @@
         <div class="col">Total:</div>
         <div style="display: flex" class="col">
           <div style="margin-right: 4px">
-            {{ getTotalPrice() }}
+            {{ getTotalPrice().toFixed(2) }}
           </div>
           <div>
             <div class="nav-item" ngbDropdown>
@@ -111,7 +111,7 @@
         </div>
         <div class="col">
           <p class="card-text details__row-2__car-properties">
-            {{  price }} {{ currencyService.getCurrentCurrency() }}
+            {{  price.toFixed(2) }} {{ currencyService.getCurrentCurrency() }}
           </p>
         </div>
       </div>

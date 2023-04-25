@@ -38,5 +38,9 @@ describe('BookingDataService', () => {
       expect(booking).toBe(mockBooking);
     });
   });
-  it.todo('should cancel a booking');
+  it('should cancel a booking', () => {
+    spectator.service.cancelBooking(mockBooking3).subscribe((booking) => {
+      expect(booking).toBe(mockBooking3);
+    });
+  });
 });

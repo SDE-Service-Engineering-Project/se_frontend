@@ -15,6 +15,7 @@ exports[`BookingCardComponent should render the component with an active booking
         class="col-3 d-flex"
       >
         
+        
         <img
           alt="car"
           class="card-img"
@@ -99,6 +100,7 @@ exports[`BookingCardComponent should render the component with an expired bookin
         />
         
         
+        
       </div>
       <div
         class="col-md-8"
@@ -160,6 +162,13 @@ exports[`BookingCardComponent should render the component with an pending bookin
       <div
         class="col-3 d-flex"
       >
+        
+        <img
+          alt="car"
+          class="card-img"
+          src="../../../../../assets/clock.png"
+          style="margin: auto;"
+        />
         
         
       </div>

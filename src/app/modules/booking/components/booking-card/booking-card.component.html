@@ -8,6 +8,13 @@
         style="margin: auto"
         alt="car"
       />
+      <img
+        *ngIf="booking.bookingStatus === 'PENDING'"
+        src="../../../../../assets/clock.png"
+        class="card-img"
+        style="margin: auto"
+        alt="car"
+      />
 
       <img
         *ngIf="booking.bookingStatus === 'BOOKED'"

@@ -12,6 +12,173 @@ exports[`BookingComponent should render the component 1`] = `
       class="row"
     >
       <h3>
+        Future bookings
+      </h3>
+      <div
+        class="col-6 justify-content-center"
+      >
+        <app-booking-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card mb-2 mt-1"
+            style="max-width: 540px;"
+          >
+            <div
+              class="row no-gutters justify-content-center"
+            >
+              <div
+                class="col-3 d-flex"
+              >
+                
+                <img
+                  alt="car"
+                  class="card-img"
+                  src="../../../../../assets/clock.png"
+                  style="margin: auto;"
+                />
+                
+                
+              </div>
+              <div
+                class="col-md-8"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                     Vehicle: VW Golf 
+                  </h5>
+                  <hr />
+                  <p
+                    class="card-text mt-2"
+                  >
+                     February 20, 2020 - March 1, 2020 
+                  </p>
+                  <p
+                    class="card-text"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Booking days:
+                    </span>
+                     10 
+                  </p>
+                  <hr />
+                  <p
+                    class="card-text mt-0"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Total amount:
+                    </span>
+                     $12,345.00 
+                  </p>
+                  <div>
+                    <button
+                      class="btn btn-danger"
+                      data-testid="cancel-booking-btn"
+                    >
+                       Withdraw Booking 
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-booking-card>
+      </div>
+      <div
+        class="col-6 justify-content-center"
+      >
+        <app-booking-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card mb-2 mt-1"
+            style="max-width: 540px;"
+          >
+            <div
+              class="row no-gutters justify-content-center"
+            >
+              <div
+                class="col-3 d-flex"
+              >
+                
+                <img
+                  alt="car"
+                  class="card-img"
+                  src="../../../../../assets/clock.png"
+                  style="margin: auto;"
+                />
+                
+                
+              </div>
+              <div
+                class="col-md-8"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                     Vehicle: VW Golf 
+                  </h5>
+                  <hr />
+                  <p
+                    class="card-text mt-2"
+                  >
+                     February 20, 2020 - March 1, 2020 
+                  </p>
+                  <p
+                    class="card-text"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Booking days:
+                    </span>
+                     10 
+                  </p>
+                  <hr />
+                  <p
+                    class="card-text mt-0"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Total amount:
+                    </span>
+                     $12,345.00 
+                  </p>
+                  <div>
+                    <button
+                      class="btn btn-danger"
+                      data-testid="cancel-booking-btn"
+                    >
+                       Withdraw Booking 
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-booking-card>
+      </div>
+      
+    </div>
+    
+    <div
+      class="row"
+    >
+      <h3>
         Current bookings
       </h3>
       <div
@@ -30,6 +197,7 @@ exports[`BookingComponent should render the component 1`] = `
               <div
                 class="col-3 d-flex"
               >
+                
                 
                 <img
                   alt="car"
@@ -108,6 +276,7 @@ exports[`BookingComponent should render the component 1`] = `
               <div
                 class="col-3 d-flex"
               >
+                
                 
                 <img
                   alt="car"
@@ -203,75 +372,6 @@ exports[`BookingComponent should render the component 1`] = `
                 />
                 
                 
-              </div>
-              <div
-                class="col-md-8"
-              >
-                <div
-                  class="card-body"
-                >
-                  <h5
-                    class="card-title"
-                  >
-                     Vehicle: Opel Kadett 
-                  </h5>
-                  <hr />
-                  <p
-                    class="card-text mt-2"
-                  >
-                     February 20, 2020 - February 20, 2020 
-                  </p>
-                  <p
-                    class="card-text"
-                  >
-                    <span
-                      class="fw-bold"
-                    >
-                      Booking days:
-                    </span>
-                     0 
-                  </p>
-                  <hr />
-                  <p
-                    class="card-text mt-0"
-                  >
-                    <span
-                      class="fw-bold"
-                    >
-                      Total amount:
-                    </span>
-                     $12,345.00 
-                  </p>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </app-booking-card>
-      </div>
-      <div
-        class="col-6 justify-content-center"
-      >
-        <app-booking-card
-          style="margin: 1rem;"
-        >
-          <div
-            class="card mb-2 mt-1"
-            style="max-width: 540px;"
-          >
-            <div
-              class="row no-gutters justify-content-center"
-            >
-              <div
-                class="col-3 d-flex"
-              >
-                <img
-                  alt="car"
-                  class="card-img"
-                  src="../../../../../assets/expired.png"
-                  style="margin: auto;"
-                />
-                
                 
               </div>
               <div
@@ -343,6 +443,7 @@ exports[`BookingComponent should render the component 1`] = `
                 />
                 
                 
+                
               </div>
               <div
                 class="col-md-8"
@@ -411,6 +512,78 @@ exports[`BookingComponent should render the component 1`] = `
                   src="../../../../../assets/expired.png"
                   style="margin: auto;"
                 />
+                
+                
+                
+              </div>
+              <div
+                class="col-md-8"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title"
+                  >
+                     Vehicle: Opel Kadett 
+                  </h5>
+                  <hr />
+                  <p
+                    class="card-text mt-2"
+                  >
+                     February 20, 2020 - February 20, 2020 
+                  </p>
+                  <p
+                    class="card-text"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Booking days:
+                    </span>
+                     0 
+                  </p>
+                  <hr />
+                  <p
+                    class="card-text mt-0"
+                  >
+                    <span
+                      class="fw-bold"
+                    >
+                      Total amount:
+                    </span>
+                     $12,345.00 
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-booking-card>
+      </div>
+      <div
+        class="col-6 justify-content-center"
+      >
+        <app-booking-card
+          style="margin: 1rem;"
+        >
+          <div
+            class="card mb-2 mt-1"
+            style="max-width: 540px;"
+          >
+            <div
+              class="row no-gutters justify-content-center"
+            >
+              <div
+                class="col-3 d-flex"
+              >
+                <img
+                  alt="car"
+                  class="card-img"
+                  src="../../../../../assets/expired.png"
+                  style="margin: auto;"
+                />
+                
                 
                 
               </div>

@@ -2,7 +2,7 @@ import { Car } from './car';
 
 export interface Booking {
   bookingId?: number;
-  createdOn: string;
+  createdOn?: string;
   bookedFrom: string;
   bookedUntil: string;
   bookingStatus?: string;
@@ -11,5 +11,5 @@ export interface Booking {
   carId: string;
   userId?: number; // for now optional since we do not have a user id available
   daysToRent?: number;
-  car: Car;
+  car?: Car;
 }

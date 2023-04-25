@@ -1,5 +1,18 @@
 <div class="container" style="margin-top: 1rem">
-  <div *ngIf="bookings.length > 0" class="row">
+  <div *ngIf="filterBookings('PENDING').length > 0" class="row">
+    <h3>Future bookings</h3>
+    <div
+      class="col-6 justify-content-center"
+      *ngFor="let booking of filterBookings('PENDING')"
+    >
+      <app-booking-card
+        style="margin: 1rem"
+        [booking]="booking"
+        (bookingCanceled)="cancelBooking($event)"
+      ></app-booking-card>
+    </div>
+  </div>
+  <div *ngIf="filterBookings('BOOKED').length > 0" class="row">
     <h3>Current bookings</h3>
     <div
       class="col-6 justify-content-center"
