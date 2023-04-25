@@ -8,6 +8,7 @@ export interface Booking {
   bookingStatus?: string;
   price: number;
   currency: string;
+  currencySaved?: string;
   carId: string;
   userId?: number; // for now optional since we do not have a user id available
   daysToRent?: number;

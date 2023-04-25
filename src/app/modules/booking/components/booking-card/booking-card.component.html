@@ -44,7 +44,7 @@
         <hr />
         <p class="card-text mt-0">
           <span class="fw-bold">Total amount:</span>
-          {{ booking.price | currency : booking.currency }}
+          {{ booking.price | currency : booking.currencySaved }}
         </p>
         <div *ngIf="booking.bookingStatus !== 'EXPIRED'">
           <button data-testid="cancel-booking-btn" class="btn btn-danger" (click)="cancelBooking(booking)">

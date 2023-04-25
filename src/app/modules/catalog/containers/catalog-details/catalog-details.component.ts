@@ -115,7 +115,7 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
       carId: this.getCarId(),
       bookedFrom: this.createDateFromNgbDate(this.startDate!).toISOString(),
       bookedUntil: this.createDateFromNgbDate(this.endDate!).toISOString(),
-      currency: 'USD',
+      currency: this.currencyService.getCurrentCurrency(),
       price: this.getTotalPrice(true),
       daysToRent: this.calcDuration(this.startDate!, this.endDate!),
     };
