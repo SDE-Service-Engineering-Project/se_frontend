@@ -5,7 +5,11 @@ import {
 } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
 import { BookingDataService } from './booking-data.service';
-import { mockBookings } from '../../../utils/testing/mocks/booking.mock';
+import {
+  mockBooking,
+  mockBooking3,
+  mockBookings,
+} from '../../utils/testing/mocks/booking.mock';
 
 describe('BookingDataService', () => {
   let spectator: SpectatorService<BookingDataService>;
@@ -26,6 +30,17 @@ describe('BookingDataService', () => {
   it('should fetch all cars', () => {
     spectator.service.fetchBookings().subscribe((bookings) => {
       expect(bookings).toBe(mockBookings);
+    });
+  });
+
+  it('should create a booking', () => {
+    spectator.service.createBooking(mockBooking).subscribe((booking) => {
+      expect(booking).toBe(mockBooking);
+    });
+  });
+  it('should cancel a booking', () => {
+    spectator.service.cancelBooking(mockBooking3).subscribe((booking) => {
+      expect(booking).toBe(mockBooking3);
     });
   });
 });

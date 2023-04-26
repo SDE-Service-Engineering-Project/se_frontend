@@ -5,6 +5,7 @@ import { CarCardModule } from './components/car-card/car-card.module';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { CatalogRoutingModule } from './config/catalog.routing';
 import { SharedModule } from '../../shared/shared.module';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [CatalogComponent, CatalogDetailsComponent],
@@ -14,6 +15,7 @@ import { SharedModule } from '../../shared/shared.module';
     AsyncPipe,
     CommonModule,
     SharedModule,
+    NgbDropdownModule,
   ],
 })
 export class CatalogModule {}

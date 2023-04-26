@@ -9,7 +9,7 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../../services/http/auth.service';
-import { StorageService } from '../../services/storage.service';
+import { StorageService } from '../../services/storage/storage.service';
 import { ToastService } from '../../services/toast/toast.service';
 import { of, throwError } from 'rxjs';
 import { mockAuthResponse } from '../../utils/testing/mocks/authResponse.mock';

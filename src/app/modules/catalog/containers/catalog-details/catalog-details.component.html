@@ -5,7 +5,7 @@
   <div class="row row-cols-auto details__row-1">
     <div class="col details__row-1__image">
       <img
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+        src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
         class="card-img-top"
         alt="{{ car.brand }} {{ car.model }}"
       />
@@ -19,23 +19,54 @@
       </div>
       <div class="row details__row-1__day-price">
         <div class="col">Total Per Day:</div>
-        <div class="col">{{ car.currency }} {{ car.price }}</div>
+        <div class="col">{{ price.toFixed(2) }} {{ currencyService.getCurrentCurrency() }}</div>
       </div>
       <div class="row details__row-1__separator">
         <hr />
       </div>
       <div class="row details__row-1__total-price">
         <div class="col">Total:</div>
-        <div class="col">{{ car.currency }} {{ getTotalPrice() }}</div>
+        <div style="display: flex" class="col">
+          <div style="margin-right: 4px">
+            {{ getTotalPrice().toFixed(2) }}
+          </div>
+          <div>
+            <div class="nav-item" ngbDropdown>
+              <a
+                class="nav-link"
+                tabindex="0"
+                ngbDropdownToggle
+                id="navbarDropdown1"
+                role="button"
+              >
+                {{ currencyService.getCurrentCurrency() }}
+              </a>
+              <div
+                *ngIf="currencies$ | async as currencies"
+                ngbDropdownMenu
+                aria-labelledby="navbarDropdown1"
+                class="dropdown-menu"
+              >
+                <p
+                  ngbDropdownItem
+                  *ngFor="let currency of currencies.currencies"
+                  (click)="setCurrency(currency)"
+                >
+                  {{ currency }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row details__row-1__rsv-btn">
         <button
           class="btn btn-primary"
-          data-testid="reserve-btn"
+          data-testid="book-car-btn"
           [disabled]="!checkIfDatesAreValid()"
-          (click)="reserveCar()"
+          (click)="bookCar()"
         >
-          Reserve Car
+          Book Car
         </button>
       </div>
     </div>
@@ -80,7 +111,7 @@
         </div>
         <div class="col">
           <p class="card-text details__row-2__car-properties">
-            {{ car.price }}
+            {{  price.toFixed(2) }} {{ currencyService.getCurrentCurrency() }}
           </p>
         </div>
       </div>

@@ -34,4 +34,10 @@ describe('CarDataService', () => {
       expect(car).toBe(carMock1);
     });
   });
+
+  it('should fetch car within time range', () => {
+    spectator.service.fetchAvailableCars(1344, 234454).subscribe((cars) => {
+      expect(cars).toBe(carsMock);
+    });
+  });
 });

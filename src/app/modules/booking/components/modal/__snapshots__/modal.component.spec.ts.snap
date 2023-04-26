@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalComponent should render the component 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root0"
+  >
+    <div
+      class="modal-header"
+    >
+      <h4
+        class="modal-title"
+        id="modal-title"
+      >
+        Cancel Booking
+      </h4>
+      <button
+        aria-describedby="modal-title"
+        aria-label="Close button"
+        class="btn-close"
+        data-testid="modal-close-btn"
+        type="button"
+      />
+    </div>
+    <div
+      class="modal-body"
+    >
+      <p>
+        Are you sure you want to cancel your Booking?
+      </p>
+      <p>
+        <span
+          class="text-danger"
+        >
+          This operation can not be undone!
+        </span>
+      </p>
+    </div>
+    <div
+      class="modal-footer"
+    >
+      <button
+        class="btn btn-outline-secondary"
+        data-testid="modal-cancel-btn"
+        type="button"
+      >
+         Cancel 
+      </button>
+      <button
+        class="btn btn-danger"
+        data-testid="modal-confirm-btn"
+        ngbautofocus=""
+        type="button"
+      >
+         Ok 
+      </button>
+    </div>
+  </div>,
+}
+`;

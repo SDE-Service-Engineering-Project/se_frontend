@@ -10,6 +10,7 @@ import {
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/http/auth.service';
 import { ToastService } from '../../services/toast/toast.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -75,7 +76,7 @@ export class RegisterComponent {
               )
             );
         },
-        error: (err) => {
+        error: (err: HttpErrorResponse) => {
           this.registerForm.get('password')?.setValue('');
           this.registerForm.get('confirm_password')?.setValue('');
           this.toastService.showDefaultErrorToast(err.error.message);

@@ -16,7 +16,7 @@ exports[`HeaderComponent should render the component 1`] = `
         href="/home"
         routerlink="/home"
       >
-        Navbar
+        Home
       </a>
       <button
         aria-controls="navbarSupportedContent"
@@ -61,18 +61,6 @@ exports[`HeaderComponent should render the component 1`] = `
               routerlinkactive="active-link"
             >
               Rented Cars
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="nav-link"
-              data-testid="nav-item-maps"
-              href="/maps"
-              routerlinkactive="active-link"
-            >
-              Find a Location
             </a>
           </li>
           

@@ -1,6 +1,11 @@
-import {TestBed} from '@angular/core/testing';
-import {ACCESS_TOKEN, REFRESH_TOKEN, StorageService, USER_NAME,} from './storage.service';
-import {AuthResponse} from '../models/AuthResponse';
+import { TestBed } from '@angular/core/testing';
+import {
+  ACCESS_TOKEN,
+  REFRESH_TOKEN,
+  StorageService,
+  USER_NAME,
+} from './storage.service';
+import { AuthResponse } from '../../models/AuthResponse';
 
 const token: AuthResponse = {
   authToken: 'token',

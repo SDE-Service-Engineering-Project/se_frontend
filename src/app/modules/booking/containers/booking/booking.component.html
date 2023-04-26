@@ -1,22 +1,45 @@
 <div class="container" style="margin-top: 1rem">
-
-  <div class="row justify-content-center ">
-
-    <div class="col-6 justify-content-center" *ngFor="let booking of currentBooking$ | async">
-      <h3>Current bookings</h3>
-      <app-booking-card style="margin: 1rem" [booking]="booking"></app-booking-card>
+  <div *ngIf="filterBookings('PENDING').length > 0" class="row">
+    <h3>Future bookings</h3>
+    <div
+      class="col-6 justify-content-center"
+      *ngFor="let booking of filterBookings('PENDING')"
+    >
+      <app-booking-card
+        style="margin: 1rem"
+        [booking]="booking"
+        (bookingCanceled)="cancelBooking($event)"
+      ></app-booking-card>
+    </div>
+  </div>
+  <div *ngIf="filterBookings('BOOKED').length > 0" class="row">
+    <h3>Current bookings</h3>
+    <div
+      class="col-6 justify-content-center"
+      *ngFor="let booking of filterBookings('BOOKED')"
+    >
+      <app-booking-card
+        style="margin: 1rem"
+        [booking]="booking"
+        (bookingCanceled)="cancelBooking($event)"
+      ></app-booking-card>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-6 justify-content-center" *ngFor="let booking of expiredBookings$ | async">
-      <h3>Expired Bookings</h3>
-      <app-booking-card style="margin: 1rem" [booking]="booking"></app-booking-card>
+  <div *ngIf="bookings.length > 0" class="row">
+    <h3>Expired Bookings</h3>
+    <div
+      class="col-6 justify-content-center"
+      *ngFor="let booking of filterBookings('EXPIRED')"
+    >
+      <app-booking-card
+        style="margin: 1rem"
+        [booking]="booking"
+      ></app-booking-card>
     </div>
   </div>
 
-
-  <div class="container mt-1" *ngIf="(bookings$ | async)?.length === 0">
+  <div class="container mt-1" *ngIf="bookings.length === 0">
     <div class="row">
       <h1 class="text-center">No Bookings found</h1>
     </div>

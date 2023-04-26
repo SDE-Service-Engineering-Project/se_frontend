@@ -7,7 +7,7 @@ import {
 import { httpInterceptor, HttpInterceptor } from './http.interceptor';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { StorageService } from '../storage.service';
+import { StorageService } from '../storage/storage.service';
 import { ToastService } from '../toast/toast.service';
 import { AUTH_API, AuthService } from '../http/auth.service';
 import { RouterTestingModule } from '@angular/router/testing';

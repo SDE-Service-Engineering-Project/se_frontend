@@ -1,7 +1,9 @@
-<div class="mb-3">
-  <google-map height="300px"
-              width="100%"
-              [options]="options"
-              [center]="center">
-  </google-map>
-</div>
+<google-map
+  height="300px"
+  width="100%"
+  [options]="options"
+  [center]="center">
+  <map-marker *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              [options]="markerOptions"></map-marker>
+</google-map>

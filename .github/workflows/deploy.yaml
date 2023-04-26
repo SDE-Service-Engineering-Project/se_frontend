@@ -13,7 +13,7 @@ env:
   IBM_CLOUD_REGION: eu-de
   K8S_NAMESPACE: part1 # ADAPT!
   IMAGE_NAME: se-frontend-part1
-  IKS_CLUSTER: cgbisc9f0brfqd97s8d0 # name or id of cluster
+  IKS_CLUSTER: ${{ secrets.IKS_CLUSTER }} # name or id of cluster
   DEPLOYMENT_NAME: se-frontend-part1
   INTERNAL_PORT: 80 # ADAPT!
   EXTERNAL_PORT: 31648 # ADAPT!

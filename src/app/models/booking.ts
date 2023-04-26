@@ -1,11 +1,16 @@
+import { Car } from './car';
+
 export interface Booking {
-  bookingId: number;
-  createdOn: Date;
-  bookedUntil: Date;
-  bookingStatus: string;
+  bookingId?: number;
+  createdOn?: string;
+  bookedFrom: string;
+  bookedUntil: string;
+  bookingStatus?: string;
   price: number;
-  precision: number;
   currency: string;
+  currencySaved?: string;
   carId: string;
-  userId: string;
+  userId?: number; // for now optional since we do not have a user id available
+  daysToRent?: number;
+  car?: Car;
 }

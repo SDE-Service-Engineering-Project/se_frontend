@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { StorageService } from '../../../services/storage.service';
+import { StorageService } from '../../../services/storage/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -19,11 +19,6 @@ export class HeaderComponent {
       title: 'Rented Cars',
       path: '/bookings',
       testId: 'nav-item-bookings',
-    },
-    {
-      title: 'Find a Location',
-      path: '/maps',
-      testId: 'nav-item-maps',
     },
   ];
 

@@ -23,7 +23,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
         <img
           alt="VW Golf"
           class="card-img-top"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDp9uheqSrMQBmNhBUP1mwHaE0%26pid%3DApi&f=1&ipt=ee353c7a978b7ca256f57cae6ae51c4d5ca321133e806df55516214bfb5ba431&ipo=images"
+          src="https://pictures.dealer.com/c/costamesacadillac/0679/a976281f56ff06d46dc390283aa14da6x.jpg?impolicy=downsize_bkpt&imdensity=1&w=520"
         />
       </div>
       <div
@@ -118,7 +118,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           <div
             class="col"
           >
-            EUR 100
+            100.00 USD
           </div>
         </div>
         <div
@@ -136,8 +136,30 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
           </div>
           <div
             class="col"
+            style="display: flex;"
           >
-            EUR 1100
+            <div
+              style="margin-right: 4px;"
+            >
+               1100.00 
+            </div>
+            <div>
+              <div
+                class="nav-item"
+                ngbdropdown=""
+              >
+                <a
+                  class="nav-link"
+                  id="navbarDropdown1"
+                  ngbdropdowntoggle=""
+                  role="button"
+                  tabindex="0"
+                >
+                   USD 
+                </a>
+                
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -145,9 +167,9 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
         >
           <button
             class="btn btn-primary"
-            data-testid="reserve-btn"
+            data-testid="book-car-btn"
           >
-             Reserve Car 
+             Book Car 
           </button>
         </div>
       </div>
@@ -242,7 +264,7 @@ exports[`CatalogDetailsComponent should render the component 1`] = `
             <p
               class="card-text details__row-2__car-properties"
             >
-               100 
+               100.00 USD 
             </p>
           </div>
         </div>

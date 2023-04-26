@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Cancel Booking</h4>
+  <button
+    type="button"
+    class="btn-close"
+    data-testid="modal-close-btn"
+    aria-label="Close button"
+    aria-describedby="modal-title"
+    (click)="dismiss('canceled')"
+  ></button>
+</div>
+<div class="modal-body">
+  <p>Are you sure you want to cancel your Booking?</p>
+  <p>
+    <span class="text-danger"
+      >This operation can not be undone!</span
+    >
+  </p>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-secondary"
+    data-testid="modal-cancel-btn"
+    (click)="dismiss('canceled')"
+  >
+    Cancel
+  </button>
+  <button
+    type="button"
+    ngbAutofocus
+    class="btn btn-danger"
+    data-testid="modal-confirm-btn"
+    (click)="close('confirmed')"
+  >
+    Ok
+  </button>
+</div>
