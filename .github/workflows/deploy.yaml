@@ -5,8 +5,7 @@ name: Build and deploy to IBM Kubernetes
 on:
   push:
     branches:
-      #      - release/part1
-      - main
+      - release/part1
 
 env:
   GITHUB_SHA: ${{ github.sha }}
