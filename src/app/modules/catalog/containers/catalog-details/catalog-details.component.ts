@@ -44,16 +44,16 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   setCarById(): void {
     this.subscriptions.push(
-      this.carService.fetchCarById(this.getCarId()).subscribe(
-        (car: Car) => {
+      this.carService.fetchCarById(this.getCarId()).subscribe({
+        next: (car: Car) => {
           this.price = car.price;
           this.car = car;
         },
-        (error: HttpErrorResponse) => {
+        error: (error: HttpErrorResponse) => {
           this.toastService.showDefaultErrorToast(error.error.message);
-          this.router.navigate(['/not-found']);
-        }
-      )
+          void this.router.navigate(['/not-found']);
+        },
+      })
     );
   }
 
