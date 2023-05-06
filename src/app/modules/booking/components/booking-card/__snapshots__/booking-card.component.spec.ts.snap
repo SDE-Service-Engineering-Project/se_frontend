@@ -49,7 +49,7 @@ exports[`BookingCardComponent should render the component with an active booking
             >
               Booking days:
             </span>
-             10 
+             11 
           </p>
           <hr />
           <p
@@ -127,7 +127,7 @@ exports[`BookingCardComponent should render the component with an expired bookin
             >
               Booking days:
             </span>
-             0 
+             1 
           </p>
           <hr />
           <p
@@ -197,7 +197,7 @@ exports[`BookingCardComponent should render the component with an pending bookin
             >
               Booking days:
             </span>
-             10 
+             11 
           </p>
           <hr />
           <p

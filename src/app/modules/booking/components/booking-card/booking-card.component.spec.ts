@@ -64,11 +64,6 @@ describe('BookingCardComponent', () => {
     );
   });
 
-  it('should return correct amount of days ', () => {
-    component.booking = mockBooking;
-    spectator.detectChanges();
-    expect(component.booking.daysToRent).toEqual(1);
-  });
   it('should return zero if booking not defined', () => {
     expect(component.getTimeDuration()).toEqual(0);
   });

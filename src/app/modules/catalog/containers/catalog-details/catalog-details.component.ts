@@ -44,9 +44,15 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
 
   setCarById(): void {
     this.subscriptions.push(
-      this.carService.fetchCarById(this.getCarId()).subscribe((car: Car) => {
-        this.price = car.price;
-        this.car = car;
+      this.carService.fetchCarById(this.getCarId()).subscribe({
+        next: (car: Car) => {
+          this.price = car.price;
+          this.car = car;
+        },
+        error: (error: HttpErrorResponse) => {
+          this.toastService.showDefaultErrorToast(error.error.message);
+          void this.router.navigate(['/not-found']);
+        },
       })
     );
   }
@@ -113,11 +119,12 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
   buildBooking(): Booking {
     return {
       carId: this.getCarId(),
-      bookedFrom: this.createDateFromNgbDate(this.startDate!).toISOString(),
-      bookedUntil: this.createDateFromNgbDate(this.endDate!).toISOString(),
+      bookedFrom: this.createStartDateFromNgbDate(
+        this.startDate!
+      ).toISOString(),
+      bookedUntil: this.createEndDateFromNgbDate(this.endDate!).toISOString(),
       currency: this.currencyService.getCurrentCurrency(),
       price: this.getTotalPrice(true),
-      daysToRent: this.calcDuration(this.startDate!, this.endDate!),
     };
   }
 
@@ -137,13 +144,19 @@ export class CatalogDetailsComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach((sub) => sub.unsubscribe());
   }
 
-  createDateFromNgbDate(ngbDate: NgbDate): Date {
+  createStartDateFromNgbDate(ngbDate: NgbDate): Date {
     return new Date(Date.UTC(ngbDate.year, ngbDate.month - 1, ngbDate.day));
   }
 
+  createEndDateFromNgbDate(ngbDate: NgbDate): Date {
+    return new Date(
+      Date.UTC(ngbDate.year, ngbDate.month - 1, ngbDate.day, 23, 59, 59)
+    );
+  }
+
   calcDuration(startDate: NgbDate, endDate: NgbDate): number {
-    const fromDate: Date = this.createDateFromNgbDate(startDate);
-    const toDate: Date = this.createDateFromNgbDate(endDate);
+    const fromDate: Date = this.createStartDateFromNgbDate(startDate);
+    const toDate: Date = this.createEndDateFromNgbDate(endDate);
     return Math.floor(
       Math.abs(<any>fromDate - <any>toDate) / (1000 * 60 * 60 * 24)
     );

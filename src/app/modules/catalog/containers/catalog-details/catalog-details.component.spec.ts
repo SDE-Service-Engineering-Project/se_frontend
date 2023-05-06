@@ -161,9 +161,9 @@ describe('CatalogDetailsComponent', () => {
 
   it('should convert NgbDate to Date', () => {
     const date = new Date(Date.UTC(2021, 0, 1));
-    expect(component.createDateFromNgbDate(new NgbDate(2021, 1, 1))).toEqual(
-      date
-    );
+    expect(
+      component.createStartDateFromNgbDate(new NgbDate(2021, 1, 1))
+    ).toEqual(date);
   });
 
   it('should calculate the difference between two dates', () => {

@@ -39,15 +39,23 @@
         </p>
         <p class="card-text">
           <span class="fw-bold">Booking days:</span>
-          {{ getTimeDuration() | number : "1.0-0" }}
+          {{ getTimeDuration() + 1 | number : "1.0-0" }}
         </p>
         <hr />
         <p class="card-text mt-0">
           <span class="fw-bold">Total amount:</span>
-          {{ booking.price | currency : booking.currencySaved }}
+          {{
+            booking.priceSaved
+              ? (booking.priceSaved | currency : booking.currencySaved)
+              : (booking.price | currency : booking.currencySaved)
+          }}
         </p>
         <div *ngIf="booking.bookingStatus !== 'EXPIRED'">
-          <button data-testid="cancel-booking-btn" class="btn btn-danger" (click)="cancelBooking(booking)">
+          <button
+            data-testid="cancel-booking-btn"
+            class="btn btn-danger"
+            (click)="cancelBooking(booking)"
+          >
             {{
               booking.bookingStatus === "BOOKED"
                 ? "Cancel Booking"
