@@ -32,12 +32,7 @@ export class DatePickerComponent {
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
       this.startDate.emit(this.fromDate);
-    } else if (
-      this.fromDate &&
-      !this.toDate &&
-      date &&
-      date.after(this.fromDate)
-    ) {
+    } else if (this.fromDate && !this.toDate) {
       this.toDate = date;
       this.endDate.emit(this.toDate);
     } else {

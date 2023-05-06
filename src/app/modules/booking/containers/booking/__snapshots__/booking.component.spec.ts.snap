@@ -65,7 +65,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     10 
+                     11 
                   </p>
                   <hr />
                   <p
@@ -144,7 +144,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     10 
+                     11 
                   </p>
                   <hr />
                   <p
@@ -232,7 +232,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     10 
+                     11 
                   </p>
                   <hr />
                   <p
@@ -311,7 +311,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     10 
+                     11 
                   </p>
                   <hr />
                   <p
@@ -399,7 +399,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     0 
+                     1 
                   </p>
                   <hr />
                   <p
@@ -470,7 +470,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     0 
+                     1 
                   </p>
                   <hr />
                   <p
@@ -541,7 +541,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     0 
+                     1 
                   </p>
                   <hr />
                   <p
@@ -612,7 +612,7 @@ exports[`BookingComponent should render the component 1`] = `
                     >
                       Booking days:
                     </span>
-                     0 
+                     1 
                   </p>
                   <hr />
                   <p
